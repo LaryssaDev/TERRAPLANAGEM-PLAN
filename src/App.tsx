@@ -36,6 +36,26 @@ const HERO_SMALL_IMG = "https://i.imgur.com/ylFs2SK.png";
 const STRUCTURE_IMG = "https://i.imgur.com/XfRNTcu.jpeg";
 const DIFFERENTIAL_IMG = "https://i.imgur.com/YnNIwp9.jpeg";
 
+const TEAM_IMAGES_ROW1 = [
+  "https://i.imgur.com/oUr6Um3.jpeg",
+  "https://i.imgur.com/rXwqvST.jpeg",
+  "https://i.imgur.com/UWdzugQ.jpeg",
+  "https://i.imgur.com/dIxAP4t.jpeg",
+  "https://i.imgur.com/RttwgsH.jpeg",
+  "https://i.imgur.com/5now9QI.jpeg",
+  "https://i.imgur.com/fyUNTUd.jpeg",
+];
+
+const TEAM_IMAGES_ROW2 = [
+  "https://i.imgur.com/aK4wTrg.jpeg",
+  "https://i.imgur.com/glQxuoz.jpeg",
+  "https://i.imgur.com/nG9hBWs.jpeg",
+  "https://i.imgur.com/Qwuu99n.jpeg",
+  "https://i.imgur.com/RufIfMb.jpeg",
+  "https://i.imgur.com/BXW0IME.jpeg",
+  "https://i.imgur.com/UZ5IOlp.jpeg",
+];
+
 const CLIENTS = [
   { name: "Neoenergia", logo: "https://i.imgur.com/8r9N9am.png" },
   { name: "Eletrobras", logo: "https://i.imgur.com/dUSx2jK.png" },
@@ -458,10 +478,15 @@ export default function App() {
             {/* Row 1: Moving Left */}
             <div className="relative">
               <div className="flex animate-infinite-scroll w-fit">
-                {[...Array(12)].map((_, idx) => (
+                {[...TEAM_IMAGES_ROW1, ...TEAM_IMAGES_ROW1].map((img, idx) => (
                   <div key={`left-${idx}`} className="flex-shrink-0 w-72 md:w-96 px-4">
-                    <div className="aspect-video bg-brand-gray-light rounded-sm overflow-hidden shadow-md border border-brand-gray-medium/30">
-                      <ImagePlaceholder className="w-full h-full" text={t.team.placeholder} />
+                    <div className="bg-brand-gray-light rounded-sm overflow-hidden shadow-md border border-brand-gray-medium/30">
+                      <img 
+                        src={img} 
+                        alt={`Team Action ${idx}`} 
+                        className="w-full h-auto object-cover"
+                        referrerPolicy="no-referrer"
+                      />
                     </div>
                   </div>
                 ))}
@@ -471,10 +496,15 @@ export default function App() {
             {/* Row 2: Moving Right */}
             <div className="relative">
               <div className="flex animate-infinite-scroll-reverse w-fit">
-                {[...Array(12)].map((_, idx) => (
+                {[...TEAM_IMAGES_ROW2, ...TEAM_IMAGES_ROW2].map((img, idx) => (
                   <div key={`right-${idx}`} className="flex-shrink-0 w-72 md:w-96 px-4">
-                    <div className="aspect-video bg-brand-gray-light rounded-sm overflow-hidden shadow-md border border-brand-gray-medium/30">
-                      <ImagePlaceholder className="w-full h-full" text={t.team.placeholder} />
+                    <div className="bg-brand-gray-light rounded-sm overflow-hidden shadow-md border border-brand-gray-medium/30">
+                      <img 
+                        src={img} 
+                        alt={`Team Action ${idx}`} 
+                        className="w-full h-auto object-cover"
+                        referrerPolicy="no-referrer"
+                      />
                     </div>
                   </div>
                 ))}
