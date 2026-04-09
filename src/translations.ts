@@ -29,7 +29,7 @@ export const translations = {
       subtitle: "Uma gestão forte começa com papéis bem definidos",
       badge: "Excelência em cada detalhe",
       members: [
-        { name: "Angélica Facchini", role: "Financeiro & Gestão Interna", desc: "Garante organização, controle e crescimento sustentável através do relacionamento próximo com clientes." },
+        { name: "Angélica", role: "Financeiro & Gestão Interna", desc: "Garante organização, controle e crescimento sustentável através do relacionamento próximo com clientes." },
         { name: "Pablo", role: "Operações em Campo", desc: "Coordena a equipe técnica e assegura a qualidade, eficiência e segurança máxima em todas as execuções." },
         { name: "Gilmar", role: "Planejamento Estratégico", desc: "Focado na expansão da empresa, parcerias estratégicas e prospecção de novos negócios." }
       ],
@@ -130,7 +130,7 @@ export const translations = {
       subtitle: "Strong management starts with well-defined roles",
       badge: "Excellence in every detail",
       members: [
-        { name: "Angélica Facchini", role: "Finance & Internal Management", desc: "Ensures organization, control, and sustainable growth through close relationships with clients." },
+        { name: "Angélica", role: "Finance & Internal Management", desc: "Ensures organization, control, and sustainable growth through close relationships with clients." },
         { name: "Pablo", role: "Field Operations", desc: "Coordinates the technical team and ensures maximum quality, efficiency, and safety in all executions." },
         { name: "Gilmar", role: "Strategic Planning", desc: "Focused on company expansion, strategic partnerships, and prospecting for new business." }
       ],
