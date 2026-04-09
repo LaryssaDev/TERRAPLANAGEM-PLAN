@@ -4,6 +4,7 @@ export const translations = {
       about: "QUEM SOMOS",
       technical: "LAUDO TÉCNICO",
       commercial: "LAUDO COMERCIAL",
+      teamNav: "EQUIPE",
       contact: "Contato",
       langPt: "PORTUGUÊS",
       langEn: "ENGLISH"
@@ -75,6 +76,11 @@ export const translations = {
       title: "Nossos Clientes",
       desc: "Empresas que confiam no nosso trabalho e excelência operacional."
     },
+    team: {
+      title: "Equipe em Ação",
+      desc: "Nossa equipe trabalhando com dedicação e segurança em diversos projetos.",
+      placeholder: "Imagem em breve"
+    },
     contact: {
       title: "Contato",
       desc: "Precisa transformar seu terreno? Seja para construir, limpar, nivelar ou recuperar áreas, a gente resolve.",
@@ -99,6 +105,7 @@ export const translations = {
       about: "ABOUT US",
       technical: "TECHNICAL REPORT",
       commercial: "COMMERCIAL REPORT",
+      teamNav: "TEAM",
       contact: "Contact",
       langPt: "PORTUGUESE",
       langEn: "ENGLISH"
@@ -169,6 +176,11 @@ export const translations = {
     clients: {
       title: "Our Clients",
       desc: "Companies that trust our work and operational excellence."
+    },
+    team: {
+      title: "Team in Action",
+      desc: "Our team working with dedication and safety on various projects.",
+      placeholder: "Image coming soon"
     },
     contact: {
       title: "Contact",

@@ -47,3 +47,16 @@
 .animate-infinite-scroll:hover {
   animation-play-state: paused;
 }
+
+@keyframes infinite-scroll-reverse {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.animate-infinite-scroll-reverse {
+  animation: infinite-scroll-reverse 40s linear infinite;
+}
+
+.animate-infinite-scroll-reverse:hover {
+  animation-play-state: paused;
+}

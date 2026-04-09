@@ -34,6 +34,7 @@ const COLORS = {
 const LOGO_URL = "https://i.imgur.com/GwSYj0Y.png";
 const HERO_SMALL_IMG = "https://i.imgur.com/ylFs2SK.png";
 const STRUCTURE_IMG = "https://i.imgur.com/XfRNTcu.jpeg";
+const DIFFERENTIAL_IMG = "https://i.imgur.com/YnNIwp9.jpeg";
 
 const CLIENTS = [
   { name: "Neoenergia", logo: "https://i.imgur.com/8r9N9am.png" },
@@ -73,6 +74,7 @@ const Navbar = ({ lang, setLang, t }: { lang: 'pt' | 'en', setLang: (l: 'pt' | '
   const navLinks = [
     { name: t.nav.about, href: '#sobre' },
     { name: t.nav.technical, href: '#servicos' },
+    { name: t.nav.teamNav, href: '#equipe' },
     { name: t.nav.commercial, href: '#contato' },
   ];
 
@@ -384,7 +386,12 @@ export default function App() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
                   <div className="h-64 bg-brand-yellow/10 rounded-sm overflow-hidden">
-                    <ImagePlaceholder className="w-full h-full" icon={ShieldCheck} text={t.differentials.placeholder} />
+                    <img 
+                      src={DIFFERENTIAL_IMG} 
+                      alt="Diferencial" 
+                      className="w-full h-full object-cover"
+                      referrerPolicy="no-referrer"
+                    />
                   </div>
                   <div className="h-40 bg-brand-yellow rounded-sm flex items-center justify-center p-6">
                      <ShieldCheck size={64} className="text-brand-blue" />
@@ -435,6 +442,44 @@ export default function App() {
           
           <div className="text-center mt-12">
             <p className="text-brand-blue font-bold tracking-widest uppercase text-sm opacity-40">{t.authority.partners}</p>
+          </div>
+        </section>
+
+        {/* --- EQUIPE EM AÇÃO --- */}
+        <section id="equipe" className="py-24 bg-white overflow-hidden">
+          <div className="container mx-auto px-4 md:px-12 mb-16 text-center">
+            <ScrollReveal>
+              <h2 className="text-4xl mb-4 text-brand-blue">{t.team.title}</h2>
+              <p className="text-gray-600 text-lg">{t.team.desc}</p>
+            </ScrollReveal>
+          </div>
+
+          <div className="space-y-8">
+            {/* Row 1: Moving Left */}
+            <div className="relative">
+              <div className="flex animate-infinite-scroll w-fit">
+                {[...Array(12)].map((_, idx) => (
+                  <div key={`left-${idx}`} className="flex-shrink-0 w-72 md:w-96 px-4">
+                    <div className="aspect-video bg-brand-gray-light rounded-sm overflow-hidden shadow-md border border-brand-gray-medium/30">
+                      <ImagePlaceholder className="w-full h-full" text={t.team.placeholder} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Row 2: Moving Right */}
+            <div className="relative">
+              <div className="flex animate-infinite-scroll-reverse w-fit">
+                {[...Array(12)].map((_, idx) => (
+                  <div key={`right-${idx}`} className="flex-shrink-0 w-72 md:w-96 px-4">
+                    <div className="aspect-video bg-brand-gray-light rounded-sm overflow-hidden shadow-md border border-brand-gray-medium/30">
+                      <ImagePlaceholder className="w-full h-full" text={t.team.placeholder} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
