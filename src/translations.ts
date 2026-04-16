@@ -87,9 +87,11 @@ export const translations = {
       phone: "Telefone / WhatsApp",
       email: "E-mail",
       location: "Localização",
-      address: "Rua Groelândia, Nações – Timbó/SC",
+      address: "R. Groenlândia - Das Nações 73, Timbó - SC, 89120-000",
       ctaBox: "Clique no botão abaixo e fale direto com nossa equipe técnica via WhatsApp para um orçamento personalizado.",
-      whatsapp: "Falar no WhatsApp"
+      whatsapp: "Falar no WhatsApp",
+      report: "Denuncie aqui",
+      ethicsEmail: "etica@terraplanagemplan.com"
     },
     footer: {
       desc: "Excelência em infraestrutura e terraplanagem. Transformando o futuro com responsabilidade.",
@@ -188,9 +190,11 @@ export const translations = {
       phone: "Phone / WhatsApp",
       email: "Email",
       location: "Location",
-      address: "Rua Groelândia, Nações – Timbó/SC",
+      address: "R. Groenlândia - Das Nações 73, Timbó - SC, 89120-000",
       ctaBox: "Click the button below and talk directly to our technical team via WhatsApp for a personalized quote.",
-      whatsapp: "Talk on WhatsApp"
+      whatsapp: "Talk on WhatsApp",
+      report: "Report here",
+      ethicsEmail: "etica@terraplanagemplan.com"
     },
     footer: {
       desc: "Excellence in infrastructure and earthmoving. Transforming the future with responsibility.",

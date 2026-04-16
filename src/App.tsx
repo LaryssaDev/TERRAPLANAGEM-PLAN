@@ -35,6 +35,7 @@ const LOGO_URL = "https://i.imgur.com/GwSYj0Y.png";
 const HERO_SMALL_IMG = "https://i.imgur.com/ylFs2SK.png";
 const STRUCTURE_IMG = "https://i.imgur.com/XfRNTcu.jpeg";
 const DIFFERENTIAL_IMG = "https://i.imgur.com/YnNIwp9.jpeg";
+const DIFFERENTIAL_IMG_2 = "https://i.imgur.com/B9IPo9Q.jpeg";
 
 const TEAM_IMAGES_ROW1 = [
   "https://i.imgur.com/oUr6Um3.jpeg",
@@ -58,7 +59,7 @@ const TEAM_IMAGES_ROW2 = [
 
 const CLIENTS = [
   { name: "Neoenergia", logo: "https://i.imgur.com/8r9N9am.png" },
-  { name: "Eletrobras", logo: "https://i.imgur.com/dUSx2jK.png" },
+  { name: "Eletrosul", logo: "https://i.imgur.com/lozRXOs.jpeg" },
   { name: "Unifique", logo: "https://i.imgur.com/6rm2TYe.png" },
   { name: "Frigorífico Gessner", logo: "https://i.imgur.com/Tqaa9I7.png" },
   { name: "Cooper Timbó", logo: "https://i.imgur.com/X0b458C.png" },
@@ -94,40 +95,39 @@ const Navbar = ({ lang, setLang, t }: { lang: 'pt' | 'en', setLang: (l: 'pt' | '
   const navLinks = [
     { name: t.nav.about, href: '#sobre' },
     { name: t.nav.technical, href: '#servicos' },
-    { name: t.nav.teamNav, href: '#equipe' },
     { name: t.nav.commercial, href: '#contato' },
   ];
 
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'shadow-lg' : ''}`}>
       {/* Top Bar - Now White */}
-      <div className="bg-white text-brand-blue py-3 px-4 md:px-12 flex justify-between items-center text-[10px] md:text-xs font-medium uppercase tracking-widest border-b border-brand-gray-medium">
+      <div className="bg-white text-brand-blue py-2 md:py-3 px-4 md:px-12 flex justify-between items-center text-[9px] md:text-xs font-medium uppercase tracking-widest border-b border-brand-gray-medium">
         <div className="flex items-center gap-4">
-          <a href={LOGO_URL} target="_blank" rel="noreferrer">
-            <img src={LOGO_URL} alt="Logo" className="h-12 md:h-20" referrerPolicy="no-referrer" />
+          <a href="/" className="block">
+            <img src={LOGO_URL} alt="Logo" className="h-10 md:h-20" referrerPolicy="no-referrer" />
           </a>
         </div>
-        <div className="flex items-center gap-6">
-          <a href="#contato" className="hover:text-brand-yellow transition-colors font-bold">{t.nav.contact}</a>
-          <div className="flex gap-3 border-l border-brand-gray-medium pl-6">
+        <div className="flex items-center gap-3 md:gap-6">
+          <a href="#contato" className="hover:text-brand-yellow transition-colors font-bold hidden sm:block">{t.nav.contact}</a>
+          <div className="flex gap-2 md:gap-3 sm:border-l border-brand-gray-medium sm:pl-4 md:pl-6">
             <button 
               onClick={() => setLang('pt')}
-              className={`hover:text-brand-yellow transition-colors ${lang === 'pt' ? 'font-bold' : 'opacity-50'}`}
+              className={`hover:text-brand-yellow transition-colors ${lang === 'pt' ? 'font-bold underline underline-offset-4 decoration-brand-yellow' : 'opacity-50'}`}
             >
-              {t.nav.langPt}
+              PT
             </button>
             <button 
               onClick={() => setLang('en')}
-              className={`hover:text-brand-yellow transition-colors ${lang === 'en' ? 'font-bold' : 'opacity-50'}`}
+              className={`hover:text-brand-yellow transition-colors ${lang === 'en' ? 'font-bold underline underline-offset-4 decoration-brand-yellow' : 'opacity-50'}`}
             >
-              {t.nav.langEn}
+              EN
             </button>
           </div>
         </div>
       </div>
 
       {/* Main Menu - Now Blue */}
-      <nav className={`bg-brand-blue text-white transition-all duration-300 ${isScrolled ? 'py-3' : 'py-5'}`}>
+      <nav className={`bg-brand-blue text-white transition-all duration-300 ${isScrolled ? 'py-1 md:py-3' : 'py-2 md:py-5'}`}>
         <div className="max-w-7xl mx-auto px-4 md:px-12 flex justify-between items-center">
           <div className="hidden md:flex gap-10">
             {navLinks.map((link) => (
@@ -142,9 +142,9 @@ const Navbar = ({ lang, setLang, t }: { lang: 'pt' | 'en', setLang: (l: 'pt' | '
           </div>
 
           <div className="md:hidden flex w-full justify-between items-center">
-             <span className="font-display font-black text-white text-xl">PLAN</span>
+             <span className="font-display font-black text-white text-base">PLAN</span>
              <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-white">
-               {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
              </button>
           </div>
         </div>
@@ -187,7 +187,7 @@ export default function App() {
     <div className="min-h-screen flex flex-col">
       <Navbar lang={lang} setLang={setLang} t={t} />
 
-      <main className="flex-grow pt-[100px]">
+      <main className="flex-grow pt-[80px] md:pt-[100px]">
         {/* --- HERO SECTION --- */}
         <section className="relative min-h-[90vh] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
@@ -202,12 +202,12 @@ export default function App() {
           
           <div className="w-full px-4 md:px-12 relative z-10">
             <div className="max-w-xl lg:max-w-2xl">
-              <ScrollReveal className="bg-brand-blue/85 backdrop-blur-sm text-white p-8 md:p-14 shadow-2xl relative">
+              <ScrollReveal className="bg-brand-blue/85 backdrop-blur-sm text-white p-6 md:p-14 shadow-2xl relative">
                 <div className="absolute -top-4 -left-4 w-12 h-12 bg-brand-yellow"></div>
-                <h1 className="text-4xl md:text-6xl mb-6 leading-none">
+                <h1 className="text-3xl md:text-6xl mb-6 leading-tight">
                   {t.hero.title} <span className="text-brand-yellow">Plan</span>
                 </h1>
-                <h2 className="text-xl md:text-2xl font-normal normal-case mb-8 opacity-90">
+                <h2 className="text-lg md:text-2xl font-normal normal-case mb-8 opacity-90">
                   {t.hero.subtitle}
                 </h2>
                 
@@ -243,22 +243,22 @@ export default function App() {
         </section>
 
         {/* --- SOBRE A EMPRESA --- */}
-        <section id="sobre" className="py-24 bg-white">
+        <section id="sobre" className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4 md:px-12">
             <div className="grid md:grid-cols-12 gap-12 items-center">
               <div className="md:col-span-5">
                 <ScrollReveal>
                   <span className="text-brand-blue font-bold tracking-[0.3em] text-sm mb-4 block">{t.about.tag}</span>
-                  <h2 className="text-4xl md:text-5xl mb-8 text-brand-blue">{t.about.title}</h2>
+                  <h2 className="text-3xl md:text-5xl mb-8 text-brand-blue">{t.about.title}</h2>
                   <div className="w-20 h-1.5 bg-brand-yellow mb-8"></div>
                 </ScrollReveal>
               </div>
               <div className="md:col-span-7">
                 <ScrollReveal delay={0.2}>
-                  <p className="text-2xl font-light text-brand-blue mb-8 leading-relaxed">
+                  <p className="text-xl md:text-2xl font-light text-brand-blue mb-8 leading-relaxed">
                     {t.about.highlight}
                   </p>
-                  <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
+                  <div className="space-y-6 text-gray-600 leading-relaxed text-base md:text-lg">
                     <p>{t.about.p1}</p>
                     <p>{t.about.p2}</p>
                     <p>{t.about.p3}</p>
@@ -270,15 +270,14 @@ export default function App() {
         </section>
 
         {/* --- ESTRUTURA DA EMPRESA --- */}
-        <section id="estrutura" className="py-24 bg-brand-blue text-white relative overflow-hidden">
+        <section id="estrutura" className="py-16 md:py-24 bg-brand-blue text-white relative overflow-hidden">
           <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-12 transform translate-x-20"></div>
           
           <div className="container mx-auto px-4 md:px-12 relative z-10">
-            <ScrollReveal className="text-center mb-20">
-              <h2 className="text-4xl md:text-5xl mb-4">{t.structure.title}</h2>
-              <p className="text-brand-yellow font-medium tracking-widest uppercase">{t.structure.subtitle}</p>
+            <ScrollReveal className="text-center mb-12 md:mb-20">
+              <h2 className="text-3xl md:text-5xl mb-4">{t.structure.title}</h2>
+              <p className="text-brand-yellow font-medium tracking-widest uppercase text-sm md:text-base">{t.structure.subtitle}</p>
             </ScrollReveal>
-
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <ScrollReveal className="relative group">
                 <div className="absolute -inset-4 border border-white/20 group-hover:border-brand-yellow/50 transition-colors duration-500"></div>
@@ -288,7 +287,7 @@ export default function App() {
                   className="w-full h-auto transition-all duration-700 shadow-2xl"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute bottom-0 left-0 bg-brand-yellow text-brand-blue p-6 font-bold text-xl">
+                <div className="absolute bottom-0 left-0 bg-brand-yellow text-brand-blue p-4 md:p-6 font-bold text-lg md:text-xl">
                   {t.structure.badge}
                 </div>
               </ScrollReveal>
@@ -318,11 +317,11 @@ export default function App() {
         </section>
 
         {/* --- EXPERIÊNCIA / AUTORIDADE --- */}
-        <section className="py-24 bg-brand-gray-light">
+        <section className="py-16 md:py-24 bg-brand-gray-light">
           <div className="container mx-auto px-4 md:px-12">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
               <ScrollReveal>
-                <h2 className="text-4xl mb-4 text-brand-blue">{t.authority.title}</h2>
+                <h2 className="text-3xl md:text-4xl mb-4 text-brand-blue">{t.authority.title}</h2>
                 <p className="text-gray-600 text-lg">
                   {t.authority.desc}
                 </p>
@@ -332,7 +331,7 @@ export default function App() {
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 { name: "Neoenergia", logo: "https://i.imgur.com/8r9N9am.png", color: "#00a341" },
-                { name: "Eletrobras", logo: "https://i.imgur.com/dUSx2jK.png", color: "#005a9c" }
+                { name: "Eletrosul", logo: "https://i.imgur.com/lozRXOs.jpeg", color: "#005a9c" }
               ].map((brand, idx) => (
                 <ScrollReveal key={brand.name} delay={idx * 0.2} className="bg-white p-12 flex flex-col items-center justify-center shadow-sm hover:shadow-xl transition-all border-b-4 border-transparent hover:border-brand-yellow group">
                   <img 
@@ -349,24 +348,21 @@ export default function App() {
         </section>
 
         {/* --- SERVIÇOS --- */}
-        <section id="servicos" className="py-24 bg-white">
+        <section id="servicos" className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4 md:px-12">
-            <ScrollReveal className="mb-16">
+            <ScrollReveal className="mb-12 md:mb-16">
               <span className="text-brand-blue font-bold tracking-[0.3em] text-sm mb-4 block">{t.services.tag}</span>
-              <h2 className="text-4xl md:text-5xl mb-4 text-brand-blue">{t.services.title}</h2>
-              <p className="text-gray-600 text-xl max-w-2xl">{t.services.desc}</p>
+              <h2 className="text-3xl md:text-5xl mb-4 text-brand-blue">{t.services.title}</h2>
+              <p className="text-gray-600 text-lg md:text-xl max-w-2xl">{t.services.desc}</p>
             </ScrollReveal>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {t.services.items.map((service: any, idx: number) => (
-                <ScrollReveal key={service.title} delay={idx * 0.05} className="group bg-brand-gray-light p-8 border border-brand-gray-medium hover:bg-brand-blue hover:border-brand-blue transition-all duration-500">
-                  <div className="w-full aspect-square bg-brand-gray-medium mb-6 flex items-center justify-center group-hover:bg-brand-yellow/20 transition-colors overflow-hidden relative">
-                    <div className="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity">
-                       <ImagePlaceholder className="w-full h-full" text={t.differentials.placeholder} />
-                    </div>
-                    <Construction className="text-brand-blue group-hover:text-brand-yellow transition-colors relative z-10" size={48} />
+                <ScrollReveal key={service.title} delay={idx * 0.05} className="group bg-brand-gray-light p-6 md:p-8 border border-brand-gray-medium hover:bg-brand-blue hover:border-brand-blue transition-all duration-500">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-2 h-8 bg-brand-yellow"></div>
+                    <h3 className="text-xl text-brand-blue group-hover:text-brand-yellow transition-colors">{service.title}</h3>
                   </div>
-                  <h3 className="text-xl mb-3 text-brand-blue group-hover:text-brand-yellow transition-colors">{service.title}</h3>
                   <p className="text-gray-600 group-hover:text-gray-300 transition-colors text-sm leading-relaxed">{service.desc}</p>
                 </ScrollReveal>
               ))}
@@ -380,25 +376,25 @@ export default function App() {
         </section>
 
         {/* --- DIFERENCIAL --- */}
-        <section className="py-24 bg-brand-blue text-white relative">
+        <section className="py-16 md:py-24 bg-brand-blue text-white relative">
           <div className="container mx-auto px-4 md:px-12 grid md:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
-              <h2 className="text-4xl md:text-5xl mb-8">{t.differentials.title}</h2>
-              <p className="text-brand-yellow text-xl mb-12 font-medium">{t.differentials.subtitle}</p>
+              <h2 className="text-3xl md:text-5xl mb-8">{t.differentials.title}</h2>
+              <p className="text-brand-yellow text-lg md:text-xl mb-12 font-medium">{t.differentials.subtitle}</p>
               
               <ul className="space-y-6">
                 {t.differentials.items.map((item: string, idx: number) => (
                   <li key={idx} className="flex items-start gap-4">
-                    <div className="mt-1 bg-brand-yellow rounded-full p-1">
-                      <CheckCircle2 size={18} className="text-brand-blue" />
+                    <div className="mt-1 bg-brand-yellow rounded-full p-1 flex-shrink-0">
+                      <CheckCircle2 size={16} className="text-brand-blue" />
                     </div>
-                    <span className="text-lg text-gray-200">{item}</span>
+                    <span className="text-base md:text-lg text-gray-200">{item}</span>
                   </li>
                 ))}
               </ul>
 
-              <div className="mt-16">
-                <p className="text-3xl font-display font-black text-brand-yellow italic">{t.differentials.quote}</p>
+              <div className="mt-12 md:mt-16">
+                <p className="text-xl md:text-3xl font-display font-black text-brand-yellow italic">{t.differentials.quote}</p>
               </div>
             </ScrollReveal>
 
@@ -422,7 +418,12 @@ export default function App() {
                      <Award size={64} className="text-brand-yellow" />
                   </div>
                   <div className="h-64 bg-brand-yellow/10 rounded-sm overflow-hidden">
-                    <ImagePlaceholder className="w-full h-full" icon={Award} text={t.differentials.placeholder} />
+                    <img 
+                      src={DIFFERENTIAL_IMG_2} 
+                      alt="Diferencial 2" 
+                      className="w-full h-full object-cover"
+                      referrerPolicy="no-referrer"
+                    />
                   </div>
                 </div>
               </div>
@@ -431,19 +432,19 @@ export default function App() {
         </section>
 
         {/* --- CLIENTES --- */}
-        <section className="py-24 bg-white overflow-hidden">
-          <div className="container mx-auto px-4 md:px-12 mb-16 text-center">
+        <section className="py-16 md:py-24 bg-white overflow-hidden">
+          <div className="container mx-auto px-4 md:px-12 mb-12 md:mb-16 text-center">
             <ScrollReveal>
-              <h2 className="text-4xl mb-4 text-brand-blue">{t.clients.title}</h2>
-              <p className="text-gray-600 text-lg">{t.clients.desc}</p>
+              <h2 className="text-3xl md:text-4xl mb-4 text-brand-blue">{t.clients.title}</h2>
+              <p className="text-gray-600 text-base md:text-lg">{t.clients.desc}</p>
             </ScrollReveal>
           </div>
 
           <div className="relative">
             <div className="flex animate-infinite-scroll w-fit">
               {[...CLIENTS, ...CLIENTS].map((client, idx) => (
-                <div key={idx} className="flex-shrink-0 w-48 md:w-64 px-4">
-                  <div className="bg-brand-gray-light h-32 md:h-40 flex items-center justify-center p-6 transition-all duration-500 border border-transparent hover:border-brand-yellow/30">
+                <div key={idx} className="flex-shrink-0 w-32 md:w-64 px-2 md:px-4">
+                  <div className="bg-brand-gray-light h-24 md:h-40 flex items-center justify-center p-4 md:p-6 transition-all duration-500 border border-transparent hover:border-brand-yellow/30">
                     <img 
                       src={client.logo} 
                       alt={client.name} 
@@ -466,11 +467,11 @@ export default function App() {
         </section>
 
         {/* --- EQUIPE EM AÇÃO --- */}
-        <section id="equipe" className="py-24 bg-white overflow-hidden">
-          <div className="container mx-auto px-4 md:px-12 mb-16 text-center">
+        <section id="equipe" className="py-16 md:py-24 bg-white overflow-hidden">
+          <div className="container mx-auto px-4 md:px-12 mb-12 md:mb-16 text-center">
             <ScrollReveal>
-              <h2 className="text-4xl mb-4 text-brand-blue">{t.team.title}</h2>
-              <p className="text-gray-600 text-lg">{t.team.desc}</p>
+              <h2 className="text-3xl md:text-4xl mb-4 text-brand-blue">{t.team.title}</h2>
+              <p className="text-gray-600 text-base md:text-lg">{t.team.desc}</p>
             </ScrollReveal>
           </div>
 
@@ -479,7 +480,7 @@ export default function App() {
             <div className="relative">
               <div className="flex animate-infinite-scroll w-fit">
                 {[...TEAM_IMAGES_ROW1, ...TEAM_IMAGES_ROW1].map((img, idx) => (
-                  <div key={`left-${idx}`} className="flex-shrink-0 w-72 md:w-96 px-4">
+                  <div key={`left-${idx}`} className="flex-shrink-0 w-60 md:w-96 px-3 md:px-4">
                     <div className="bg-brand-gray-light rounded-sm overflow-hidden shadow-md border border-brand-gray-medium/30">
                       <img 
                         src={img} 
@@ -497,7 +498,7 @@ export default function App() {
             <div className="relative">
               <div className="flex animate-infinite-scroll-reverse w-fit">
                 {[...TEAM_IMAGES_ROW2, ...TEAM_IMAGES_ROW2].map((img, idx) => (
-                  <div key={`right-${idx}`} className="flex-shrink-0 w-72 md:w-96 px-4">
+                  <div key={`right-${idx}`} className="flex-shrink-0 w-60 md:w-96 px-3 md:px-4">
                     <div className="bg-brand-gray-light rounded-sm overflow-hidden shadow-md border border-brand-gray-medium/30">
                       <img 
                         src={img} 
@@ -514,54 +515,61 @@ export default function App() {
         </section>
 
         {/* --- CONTATO --- */}
-        <section id="contato" className="py-24 bg-brand-gray-light">
+        <section id="contato" className="py-16 md:py-24 bg-brand-gray-light">
           <div className="container mx-auto px-4 md:px-12">
-            <div className="grid lg:grid-cols-2 gap-16">
+            <div className="grid lg:grid-cols-2 gap-12 md:gap-16">
               <ScrollReveal>
-                <h2 className="text-4xl md:text-5xl mb-6 text-brand-blue">{t.contact.title}</h2>
-                <p className="text-2xl text-brand-blue font-light mb-12">{t.contact.desc}</p>
+                <h2 className="text-3xl md:text-5xl mb-6 text-brand-blue">{t.contact.title}</h2>
+                <p className="text-lg md:text-2xl text-brand-blue font-light mb-12">{t.contact.desc}</p>
                 
-                <div className="space-y-8 mb-12">
-                  <div className="flex items-center gap-6 group">
-                    <div className="w-14 h-14 bg-brand-blue text-brand-yellow flex items-center justify-center rounded-full group-hover:bg-brand-yellow group-hover:text-brand-blue transition-colors">
-                      <Phone size={24} />
+                <div className="space-y-6 md:space-y-8 mb-12">
+                  <div className="flex items-center gap-4 md:gap-6 group">
+                    <div className="w-12 h-12 md:w-14 md:h-14 bg-brand-blue text-brand-yellow flex items-center justify-center rounded-full group-hover:bg-brand-yellow group-hover:text-brand-blue transition-colors flex-shrink-0">
+                      <Phone size={20} className="md:w-6 md:h-6" />
                     </div>
                     <div>
-                      <p className="text-xs uppercase tracking-widest text-gray-500 font-bold">{t.contact.phone}</p>
-                      <p className="text-xl font-bold text-brand-blue">(47) 99991-1880</p>
+                      <p className="text-[10px] md:text-xs uppercase tracking-widest text-gray-500 font-bold">{t.contact.phone}</p>
+                      <p className="text-lg md:text-xl font-bold text-brand-blue">(47) 99991-1880</p>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-6 group">
-                    <div className="w-14 h-14 bg-brand-blue text-brand-yellow flex items-center justify-center rounded-full group-hover:bg-brand-yellow group-hover:text-brand-blue transition-colors">
-                      <Mail size={24} />
+                  <div className="flex items-center gap-4 md:gap-6 group">
+                    <div className="w-12 h-12 md:w-14 md:h-14 bg-brand-blue text-brand-yellow flex items-center justify-center rounded-full group-hover:bg-brand-yellow group-hover:text-brand-blue transition-colors flex-shrink-0">
+                      <Mail size={20} className="md:w-6 md:h-6" />
                     </div>
                     <div>
-                      <p className="text-xs uppercase tracking-widest text-gray-500 font-bold">{t.contact.email}</p>
-                      <p className="text-xl font-bold text-brand-blue">terraplanagemplan@gmail.com</p>
+                      <p className="text-[10px] md:text-xs uppercase tracking-widest text-gray-500 font-bold">{t.contact.email}</p>
+                      <p className="text-lg md:text-xl font-bold text-brand-blue break-all">contato@terraplanagemplan.com</p>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-6 group">
-                    <div className="w-14 h-14 bg-brand-blue text-brand-yellow flex items-center justify-center rounded-full group-hover:bg-brand-yellow group-hover:text-brand-blue transition-colors">
-                      <MapPin size={24} />
+                  <div className="flex items-center gap-4 md:gap-6 group">
+                    <div className="w-12 h-12 md:w-14 md:h-14 bg-brand-blue text-brand-yellow flex items-center justify-center rounded-full group-hover:bg-brand-yellow group-hover:text-brand-blue transition-colors flex-shrink-0">
+                      <MapPin size={20} className="md:w-6 md:h-6" />
                     </div>
                     <div>
-                      <p className="text-xs uppercase tracking-widest text-gray-500 font-bold">{t.contact.location}</p>
-                      <p className="text-xl font-bold text-brand-blue">{t.contact.address}</p>
+                      <p className="text-[10px] md:text-xs uppercase tracking-widest text-gray-500 font-bold">{t.contact.location}</p>
+                      <p className="text-lg md:text-xl font-bold text-brand-blue">{t.contact.address}</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="p-8 bg-white border-l-8 border-brand-yellow shadow-xl">
-                  <p className="text-lg text-gray-600 mb-6">{t.contact.ctaBox}</p>
+                <div className="mb-12">
                   <a 
                     href="https://wa.me/5547999911880" 
                     target="_blank" 
                     rel="noreferrer"
                     className="inline-flex items-center gap-3 bg-[#25D366] text-white font-black px-10 py-5 rounded-sm hover:scale-105 transition-transform shadow-lg"
                   >
+                    <Phone size={20} />
                     {t.contact.whatsapp}
+                  </a>
+                </div>
+
+                <div className="pt-8 border-t border-brand-gray-medium opacity-60 hover:opacity-100 transition-opacity">
+                  <p className="text-sm font-bold text-brand-blue uppercase tracking-widest mb-2">{t.contact.report}</p>
+                  <a href={`mailto:${t.contact.ethicsEmail}`} className="text-gray-600 hover:text-brand-blue transition-colors">
+                    {t.contact.ethicsEmail}
                   </a>
                 </div>
               </ScrollReveal>
@@ -569,7 +577,7 @@ export default function App() {
               <ScrollReveal delay={0.3} className="h-full min-h-[400px] bg-brand-gray-medium relative overflow-hidden shadow-2xl">
                 <div className="absolute inset-0 bg-brand-blue/10 z-10 pointer-events-none"></div>
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14234.8456789!2d-49.27!3d-26.82!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDQ5JzEyLjAiUyA0OcKwMTYnMTIuMCJX!5e0!3m2!1spt-BR!2sbr!4v1600000000000!5m2!1spt-BR!2sbr" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3562.385368945678!2d-49.268609!3d-26.8111258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94defba7258c5091%3A0x1559d5d3153f4edb!2sTerraplanagem%20PLAN!5e0!3m2!1spt-BR!2sbr!4v1713100000000!5m2!1spt-BR!2sbr" 
                   className="w-full h-full border-0"
                   allowFullScreen={true} 
                   loading="lazy"
