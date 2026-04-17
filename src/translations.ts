@@ -18,13 +18,20 @@ export const translations = {
     },
     about: {
       tag: "INSTITUCIONAL",
-      title: "Sobre a Empresa",
-      highlight: "Dois irmãos. Um sonho. Uma empresa que cresce com propósito.",
-      p1: "A Terraplanagem Plan nasceu do sonho de dois irmãos que decidiram construir algo juntos — mais do que um negócio, um projeto de vida.",
-      p2: "Desde o início, cada desafio foi enfrentado com dedicação, trabalho duro e compromisso com a excelência. Hoje, a PLAN é a materialização desse sonho, construída com base em confiança, responsabilidade e resultados reais.",
-      p3: "Mais do que executar serviços, nós construímos histórias, transformamos espaços e entregamos soluções que geram valor. Seguimos crescendo com um propósito claro: ser referência em terraplanagem e infraestrutura, com qualidade, segurança e consistência."
+      title: "SOBRE A EMPRESA",
+      highlight: "Três profissionais. Um propósito. Uma empresa construída com estratégia, execução e responsabilidade.",
+      paragraphs: [
+        "A Terraplanagem PLAN nasceu com um objetivo claro: entregar soluções eficientes e confiáveis em serviços de terraplanagem e infraestrutura, unindo experiência prática, gestão estratégica e organização financeira sólida.",
+        "Desde o início, a empresa foi estruturada com base na complementaridade de três áreas essenciais para o crescimento sustentável:",
+        "Pablo, responsável pela execução operacional, garantindo qualidade, produtividade e eficiência em cada serviço realizado em campo;",
+        "Angélica, à frente da gestão administrativa e financeira, assegurando organização, controle e sustentabilidade do negócio;",
+        "Gilmar, atuando na estratégia e orçamentos, conduzindo o planejamento, a viabilidade dos projetos e o posicionamento da empresa no mercado.",
+        "Essa divisão clara de responsabilidades permite que cada projeto seja conduzido com precisão técnica, controle financeiro e visão estratégica.",
+        "Ao longo da nossa trajetória, transformamos desafios em resultados concretos, sempre com foco em qualidade, segurança e cumprimento de prazos. Mais do que executar serviços, entregamos soluções que geram valor e constroem relações de confiança com nossos clientes.",
+        "Seguimos em constante evolução, com o compromisso de sermos referência em terraplanagem e infraestrutura, atuando com seriedade, eficiência e consistência em cada obra."
+      ]
     },
-    structure: {
+        structure: {
       title: "Estrutura da Empresa",
       subtitle: "Uma gestão forte começa com papéis bem definidos",
       badge: "Excelência em cada detalhe",
@@ -33,7 +40,7 @@ export const translations = {
         { name: "Pablo", role: "Operações em Campo", desc: "Coordena a equipe técnica e assegura a qualidade, eficiência e segurança máxima em todas as execuções." },
         { name: "Gilmar", role: "Planejamento Estratégico", desc: "Focado na expansão da empresa, parcerias estratégicas e prospecção de novos negócios." }
       ],
-      footer: "👉 Cada um na sua função, todos com o mesmo objetivo: entregar excelência e crescer com consistência."
+      footer: "Cada um na sua função, todos com o mesmo objetivo: entregar excelência e crescer com consistência."
     },
     authority: {
       title: "Experiência / Autoridade",
@@ -43,7 +50,7 @@ export const translations = {
     services: {
       tag: "O QUE FAZEMOS",
       title: "Serviços",
-      desc: "Soluções completas em terraplanagem e infraestrutura com foco em segurança e durabilidade.",
+      desc: "Soluções técnicas em terraplanagem e infraestrutura, com execução mecanizada, controle operacional e foco em desempenho.\nAtendemos projetos com alto nível de exigência, garantindo produtividade, segurança e confiabilidade em cada etapa da execução.",
       items: [
         { title: "Terraplanagem em geral", desc: "Nivelamento, aterros e escavações de alta precisão." },
         { title: "Acessos Técnicos", desc: "Abertura e manutenção de vias para operações industriais e técnicas." },
@@ -54,9 +61,9 @@ export const translations = {
         { title: "Drenagem e Tubulações", desc: "Instalação de sistemas eficientes de escoamento de águas." },
         { title: "Demolições e Limpeza", desc: "Preparação de terrenos com remoção de estruturas e resíduos." },
         { title: "Manutenção de Tubulões", desc: "Serviços especializados em fundações e estruturas enterradas." },
-        { title: "Roçadas", desc: "Manutenção de vegetação em grandes áreas e faixas de servidão." }
+        { title: "Roçadas manual e mecanizada", desc: "Manutenção de vegetação em grandes áreas e faixas de servidão." }
       ],
-      footer: "👉 Atuamos com foco em segurança, durabilidade e conformidade ambiental.",
+      footer: "Atuamos com foco em segurança, durabilidade e conformidade ambiental.",
       cta: "Solicitar Orçamento"
     },
     differentials: {
@@ -83,13 +90,19 @@ export const translations = {
     },
     contact: {
       title: "Contato",
-      desc: "Precisa transformar seu terreno? Seja para construir, limpar, nivelar ou recuperar áreas, a gente resolve.",
+      desc: "Precisa de uma solução em terraplanagem com agilidade, segurança e resultado?\n\nAtendemos serviços de limpeza, nivelamento, abertura de acessos e preparação de áreas com equipe especializada e operação mecanizada.",
       phone: "Telefone / WhatsApp",
       email: "E-mail",
       location: "Localização",
-      address: "R. Groenlândia - Das Nações 73, Timbó - SC, 89120-000",
+      address: "R. Groenlândia - Das Nações, Timbó - SC, 89090-398",
       ctaBox: "Clique no botão abaixo e fale direto com nossa equipe técnica via WhatsApp para um orçamento personalizado.",
-      whatsapp: "Falar no WhatsApp",
+      requestPhrase: "Entre em contato e solicite seu orçamento",
+      whatsapp: "Solicitar Orçamento no WhatsApp",
+      benefits: [
+        "Atendimento rápido",
+        "Orçamento sem compromisso",
+        "Execução com equipe própria"
+      ],
       report: "Denuncie aqui",
       ethicsEmail: "etica@terraplanagemplan.com"
     },
@@ -121,11 +134,18 @@ export const translations = {
     },
     about: {
       tag: "INSTITUTIONAL",
-      title: "About the Company",
-      highlight: "Two brothers. One dream. A company that grows with purpose.",
-      p1: "Terraplanagem Plan was born from the dream of two brothers who decided to build something together — more than a business, a life project.",
-      p2: "From the beginning, every challenge was faced with dedication, hard work, and a commitment to excellence. Today, PLAN is the materialization of this dream, built on trust, responsibility, and real results.",
-      p3: "More than performing services, we build stories, transform spaces, and deliver solutions that generate value. We continue to grow with a clear purpose: to be a reference in earthmoving and infrastructure, with quality, safety, and consistency."
+      title: "ABOUT THE COMPANY",
+      highlight: "Three professionals. One purpose. A company built with strategy, execution, and responsibility.",
+      paragraphs: [
+        "Terraplanagem PLAN was born with a clear goal: to deliver efficient and reliable solutions in earthmoving and infrastructure services, uniting practical experience, strategic management, and solid financial organization.",
+        "From the beginning, the company was structured based on the complementarity of three essential areas for sustainable growth:",
+        "Pablo, responsible for operational execution, ensuring quality, productivity, and efficiency in each service performed in the field;",
+        "Angélica, leading administrative and financial management, ensuring organization, control, and business sustainability;",
+        "Gilmar, acting in strategy and budgets, conducting planning, project feasibility, and the company's positioning in the market.",
+        "This clear division of responsibilities allows each project to be conducted with technical precision, financial control, and strategic vision.",
+        "Throughout our trajectory, we have transformed challenges into concrete results, always focusing on quality, safety, and meeting deadlines. More than just performing services, we deliver solutions that generate value and build trust relationships with our clients.",
+        "We continue to constantly evolve, with the commitment to be a reference in earthmoving and infrastructure, acting with seriousness, efficiency, and consistency in each project."
+      ]
     },
     structure: {
       title: "Company Structure",
@@ -136,7 +156,7 @@ export const translations = {
         { name: "Pablo", role: "Field Operations", desc: "Coordinates the technical team and ensures maximum quality, efficiency, and safety in all executions." },
         { name: "Gilmar", role: "Strategic Planning", desc: "Focused on company expansion, strategic partnerships, and prospecting for new business." }
       ],
-      footer: "👉 Each in their role, all with the same goal: to deliver excellence and grow with consistency."
+      footer: "Each in their role, all with the same goal: to deliver excellence and grow with consistency."
     },
     authority: {
       title: "Experience / Authority",
@@ -146,7 +166,7 @@ export const translations = {
     services: {
       tag: "WHAT WE DO",
       title: "Services",
-      desc: "Complete earthmoving and infrastructure solutions with a focus on safety and durability.",
+      desc: "Technical solutions in earthmoving and infrastructure, with mechanized execution, operational control and focus on performance.\nWe serve projects with a high level of demand, ensuring productivity, safety and reliability in each stage of execution.",
       items: [
         { title: "General Earthmoving", desc: "High-precision leveling, fills, and excavations." },
         { title: "Technical Access", desc: "Opening and maintenance of roads for industrial and technical operations." },
@@ -157,9 +177,9 @@ export const translations = {
         { title: "Drainage and Piping", desc: "Installation of efficient water runoff systems." },
         { title: "Demolition and Cleaning", desc: "Site preparation with removal of structures and waste." },
         { title: "Caisson Maintenance", desc: "Specialized services in foundations and buried structures." },
-        { title: "Mowing", desc: "Vegetation maintenance in large areas and right-of-way strips." }
+        { title: "Manual and mechanized mowing", desc: "Vegetation maintenance in large areas and right-of-way strips." }
       ],
-      footer: "👉 We operate with a focus on safety, durability, and environmental compliance.",
+      footer: "We operate with a focus on safety, durability, and environmental compliance.",
       cta: "Request Quote"
     },
     differentials: {
@@ -186,13 +206,19 @@ export const translations = {
     },
     contact: {
       title: "Contact",
-      desc: "Need to transform your land? Whether to build, clean, level, or recover areas, we solve it.",
+      desc: "Need an earthmoving solution with agility, safety, and results?\n\nWe provide cleaning, leveling, road opening, and area preparation services with a specialized team and mechanized operation.",
       phone: "Phone / WhatsApp",
       email: "Email",
       location: "Location",
-      address: "R. Groenlândia - Das Nações 73, Timbó - SC, 89120-000",
+      address: "R. Groenlândia - Das Nações, Timbó - SC, 89090-398",
       ctaBox: "Click the button below and talk directly to our technical team via WhatsApp for a personalized quote.",
-      whatsapp: "Talk on WhatsApp",
+      requestPhrase: "Get in touch and request your quote",
+      whatsapp: "Request a Quote on WhatsApp",
+      benefits: [
+        "Fast service",
+        "No-obligation quote",
+        "Execution with own team"
+      ],
       report: "Report here",
       ethicsEmail: "etica@terraplanagemplan.com"
     },

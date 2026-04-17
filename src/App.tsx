@@ -24,11 +24,10 @@ import { translations } from './translations';
 
 // --- Constants ---
 const COLORS = {
-  blue: '#0B4A92',
-  yellow: '#F2A900',
+  yellow: '#f9bc06',
+  black: '#1E1E1E',
   grayLight: '#F3F5F7',
   grayMedium: '#D9DEE5',
-  black: '#1E1E1E',
 };
 
 const LOGO_URL = "https://i.imgur.com/GwSYj0Y.png";
@@ -76,7 +75,7 @@ const CLIENTS = [
 // --- Components ---
 
 const ImagePlaceholder = ({ className = "", text = "Imagem em breve", icon: Icon = Construction }) => (
-  <div className={`bg-brand-gray-light flex flex-col items-center justify-center text-brand-blue/30 font-bold uppercase tracking-widest text-[10px] p-4 border border-brand-gray-medium/30 ${className}`}>
+  <div className={`bg-brand-gray-light flex flex-col items-center justify-center text-brand-black/30 font-bold uppercase tracking-widest text-[10px] p-4 border border-brand-gray-medium/30 ${className}`}>
     <Icon size={32} className="mb-3 opacity-20" />
     <span className="text-center">{text}</span>
   </div>
@@ -101,7 +100,7 @@ const Navbar = ({ lang, setLang, t }: { lang: 'pt' | 'en', setLang: (l: 'pt' | '
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'shadow-lg' : ''}`}>
       {/* Top Bar - Now White */}
-      <div className="bg-white text-brand-blue py-2 md:py-3 px-4 md:px-12 flex justify-between items-center text-[9px] md:text-xs font-medium uppercase tracking-widest border-b border-brand-gray-medium">
+      <div className="bg-white text-brand-black py-2 md:py-3 px-4 md:px-12 flex justify-between items-center text-[9px] md:text-xs font-medium uppercase tracking-widest border-b border-brand-gray-medium">
         <div className="flex items-center gap-4">
           <a href="/" className="block">
             <img src={LOGO_URL} alt="Logo" className="h-10 md:h-20" referrerPolicy="no-referrer" />
@@ -126,15 +125,15 @@ const Navbar = ({ lang, setLang, t }: { lang: 'pt' | 'en', setLang: (l: 'pt' | '
         </div>
       </div>
 
-      {/* Main Menu - Now Blue */}
-      <nav className={`bg-brand-blue text-white transition-all duration-300 ${isScrolled ? 'py-1 md:py-3' : 'py-2 md:py-5'}`}>
+      {/* Main Menu - Yellow */}
+      <nav className={`bg-brand-yellow text-brand-black transition-all duration-300 ${isScrolled ? 'py-1 md:py-3' : 'py-2 md:py-5'}`}>
         <div className="max-w-7xl mx-auto px-4 md:px-12 flex justify-between items-center">
           <div className="hidden md:flex gap-10">
             {navLinks.map((link) => (
               <a 
                 key={link.name} 
                 href={link.href} 
-                className="text-white font-bold text-sm hover:text-brand-yellow transition-colors tracking-tighter"
+                className="text-brand-black font-bold text-sm hover:underline transition-all tracking-tighter"
               >
                 {link.name}
               </a>
@@ -142,8 +141,8 @@ const Navbar = ({ lang, setLang, t }: { lang: 'pt' | 'en', setLang: (l: 'pt' | '
           </div>
 
           <div className="md:hidden flex w-full justify-between items-center">
-             <span className="font-display font-black text-white text-base">PLAN</span>
-             <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-white">
+             <span className="font-display font-black text-brand-black text-base">PLAN</span>
+             <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-brand-black">
                {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
              </button>
           </div>
@@ -157,7 +156,7 @@ const Navbar = ({ lang, setLang, t }: { lang: 'pt' | 'en', setLang: (l: 'pt' | '
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-            className="fixed inset-0 bg-brand-blue z-[60] flex flex-col items-center justify-center gap-8 text-white"
+            className="fixed inset-0 bg-brand-yellow z-[60] flex flex-col items-center justify-center gap-8 text-brand-black"
           >
             <button onClick={() => setIsMobileMenuOpen(false)} className="absolute top-8 right-8">
               <X size={32} />
@@ -197,12 +196,12 @@ export default function App() {
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute inset-0 bg-brand-blue/30 mix-blend-multiply"></div>
+            <div className="absolute inset-0 bg-brand-black/30 mix-blend-multiply"></div>
           </div>
           
           <div className="w-full px-4 md:px-12 relative z-10">
             <div className="max-w-xl lg:max-w-2xl">
-              <ScrollReveal className="bg-brand-blue/85 backdrop-blur-sm text-white p-6 md:p-14 shadow-2xl relative">
+              <ScrollReveal className="bg-white/50 backdrop-blur-md text-brand-black p-6 md:p-14 shadow-2xl relative border border-white/20">
                 <div className="absolute -top-4 -left-4 w-12 h-12 bg-brand-yellow"></div>
                 <h1 className="text-3xl md:text-6xl mb-6 leading-tight">
                   {t.hero.title} <span className="text-brand-yellow">Plan</span>
@@ -216,25 +215,25 @@ export default function App() {
                     href="https://wa.me/5547999911880" 
                     target="_blank" 
                     rel="noreferrer"
-                    className="bg-brand-yellow text-brand-blue font-bold px-8 py-4 flex items-center justify-center gap-2 hover:bg-white transition-all group"
+                    className="bg-brand-yellow text-white font-bold px-8 py-4 flex items-center justify-center gap-2 hover:bg-brand-black hover:text-white transition-all group"
                   >
                     {t.hero.whatsapp} <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                   </a>
                   <a 
                     href="#sobre" 
-                    className="border border-white/30 text-white font-bold px-8 py-4 flex items-center justify-center hover:bg-white/10 transition-all"
+                    className="border border-brand-black/30 text-brand-black font-bold px-8 py-4 flex items-center justify-center hover:bg-brand-black hover:text-white transition-all"
                   >
                     {t.hero.discover}
                   </a>
                 </div>
 
-                <div className="flex items-center gap-4 border-t border-white/10 pt-8">
-                  <div className="bg-brand-yellow/20 p-3 rounded-full">
-                    <Phone className="text-brand-yellow" size={24} />
+                <div className="flex items-center gap-4 border-t border-brand-black/10 pt-8">
+                  <div className="bg-brand-black/10 p-3 rounded-full">
+                    <Phone className="text-brand-black" size={24} />
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-widest opacity-60">{t.hero.talkTeam}</p>
-                    <p className="text-xl font-bold">(47) 99991-1880</p>
+                    <p className="text-xl font-bold text-brand-black">(47) 99991-1880</p>
                   </div>
                 </div>
               </ScrollReveal>
@@ -248,20 +247,20 @@ export default function App() {
             <div className="grid md:grid-cols-12 gap-12 items-center">
               <div className="md:col-span-5">
                 <ScrollReveal>
-                  <span className="text-brand-blue font-bold tracking-[0.3em] text-sm mb-4 block">{t.about.tag}</span>
-                  <h2 className="text-3xl md:text-5xl mb-8 text-brand-blue">{t.about.title}</h2>
+                  <span className="text-brand-black font-bold tracking-[0.3em] text-sm mb-4 block">{t.about.tag}</span>
+                  <h2 className="text-3xl md:text-5xl mb-8 text-brand-black">{t.about.title}</h2>
                   <div className="w-20 h-1.5 bg-brand-yellow mb-8"></div>
                 </ScrollReveal>
               </div>
               <div className="md:col-span-7">
                 <ScrollReveal delay={0.2}>
-                  <p className="text-xl md:text-2xl font-light text-brand-blue mb-8 leading-relaxed">
+                  <p className="text-xl md:text-2xl font-light text-brand-black mb-8 leading-relaxed">
                     {t.about.highlight}
                   </p>
                   <div className="space-y-6 text-gray-600 leading-relaxed text-base md:text-lg">
-                    <p>{t.about.p1}</p>
-                    <p>{t.about.p2}</p>
-                    <p>{t.about.p3}</p>
+                    {t.about.paragraphs.map((p: string, idx: number) => (
+                      <p key={idx}>{p}</p>
+                    ))}
                   </div>
                 </ScrollReveal>
               </div>
@@ -270,24 +269,24 @@ export default function App() {
         </section>
 
         {/* --- ESTRUTURA DA EMPRESA --- */}
-        <section id="estrutura" className="py-16 md:py-24 bg-brand-blue text-white relative overflow-hidden">
+        <section id="estrutura" className="py-16 md:py-24 bg-brand-yellow text-brand-black relative overflow-hidden">
           <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-12 transform translate-x-20"></div>
           
           <div className="container mx-auto px-4 md:px-12 relative z-10">
             <ScrollReveal className="text-center mb-12 md:mb-20">
-              <h2 className="text-3xl md:text-5xl mb-4">{t.structure.title}</h2>
-              <p className="text-brand-yellow font-medium tracking-widest uppercase text-sm md:text-base">{t.structure.subtitle}</p>
+              <h2 className="text-3xl md:text-5xl mb-4 text-brand-black">{t.structure.title}</h2>
+              <p className="text-brand-black/60 font-bold tracking-widest uppercase text-sm md:text-base">{t.structure.subtitle}</p>
             </ScrollReveal>
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <ScrollReveal className="relative group">
-                <div className="absolute -inset-4 border border-white/20 group-hover:border-brand-yellow/50 transition-colors duration-500"></div>
+                <div className="absolute -inset-4 border border-brand-black/20 group-hover:border-brand-black/50 transition-colors duration-500"></div>
                 <img 
                   src={STRUCTURE_IMG} 
                   alt="Estrutura" 
                   className="w-full h-auto transition-all duration-700 shadow-2xl"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute bottom-0 left-0 bg-brand-yellow text-brand-blue p-4 md:p-6 font-bold text-lg md:text-xl">
+                <div className="absolute bottom-0 left-0 bg-brand-black text-white p-4 md:p-6 font-bold text-lg md:text-xl shadow-xl">
                   {t.structure.badge}
                 </div>
               </ScrollReveal>
@@ -295,20 +294,23 @@ export default function App() {
               <div className="space-y-10">
                 {t.structure.members.map((member: any, idx: number) => (
                   <ScrollReveal key={member.name} delay={idx * 0.1} className="flex gap-6">
-                    <div className="flex-shrink-0 w-12 h-12 bg-brand-yellow/20 flex items-center justify-center text-brand-yellow font-bold text-2xl">
+                    <div className="flex-shrink-0 w-12 h-12 bg-white/50 flex items-center justify-center text-brand-black font-bold text-2xl border border-brand-black/30">
                       0{idx + 1}
                     </div>
                     <div>
-                      <h3 className="text-xl text-brand-yellow mb-1">{member.name}</h3>
-                      <p className="text-sm font-bold uppercase tracking-widest mb-3 opacity-70">{member.role}</p>
-                      <p className="text-gray-300 leading-relaxed">{member.desc}</p>
+                      <h3 className="text-xl text-brand-black mb-1 font-black">{member.name}</h3>
+                      {member.role && (
+                        <p className="text-sm font-bold uppercase tracking-widest mb-3 text-white drop-shadow-sm">{member.role}</p>
+                      )}
+                      <p className="text-brand-black/80 leading-relaxed font-medium">{member.desc}</p>
                     </div>
                   </ScrollReveal>
                 ))}
                 
-                <ScrollReveal delay={0.4} className="pt-6 border-t border-white/10">
-                  <p className="text-xl font-medium italic text-brand-yellow">
-                    {t.structure.footer}
+                <ScrollReveal delay={0.4} className="pt-6 border-t border-brand-black/10">
+                  <p className="text-xl font-medium italic text-brand-black/80 flex items-start gap-3">
+                    <ArrowRight className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <span>{t.structure.footer}</span>
                   </p>
                 </ScrollReveal>
               </div>
@@ -321,7 +323,7 @@ export default function App() {
           <div className="container mx-auto px-4 md:px-12">
             <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
               <ScrollReveal>
-                <h2 className="text-3xl md:text-4xl mb-4 text-brand-blue">{t.authority.title}</h2>
+                <h2 className="text-3xl md:text-4xl mb-4 text-brand-black">{t.authority.title}</h2>
                 <p className="text-gray-600 text-lg">
                   {t.authority.desc}
                 </p>
@@ -340,7 +342,7 @@ export default function App() {
                     className="h-20 md:h-28 object-contain mb-8 group-hover:scale-110 transition-transform duration-500" 
                     referrerPolicy="no-referrer"
                   />
-                  <p className="text-brand-blue font-bold tracking-widest uppercase text-sm opacity-50">{brand.name}</p>
+                  <p className="text-brand-black/50 font-bold tracking-widest uppercase text-sm">{brand.name}</p>
                 </ScrollReveal>
               ))}
             </div>
@@ -351,57 +353,67 @@ export default function App() {
         <section id="servicos" className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4 md:px-12">
             <ScrollReveal className="mb-12 md:mb-16">
-              <span className="text-brand-blue font-bold tracking-[0.3em] text-sm mb-4 block">{t.services.tag}</span>
-              <h2 className="text-3xl md:text-5xl mb-4 text-brand-blue">{t.services.title}</h2>
-              <p className="text-gray-600 text-lg md:text-xl max-w-2xl">{t.services.desc}</p>
+              <p className="text-brand-black/70 font-bold tracking-[0.3em] text-sm mb-4 block">{t.services.tag}</p>
+              <h2 className="text-3xl md:text-5xl mb-4 text-brand-black">{t.services.title}</h2>
+              <p className="text-gray-600 text-lg md:text-xl max-w-3xl whitespace-pre-line leading-relaxed">{t.services.desc}</p>
             </ScrollReveal>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {t.services.items.map((service: any, idx: number) => (
-                <ScrollReveal key={service.title} delay={idx * 0.05} className="group bg-brand-gray-light p-6 md:p-8 border border-brand-gray-medium hover:bg-brand-blue hover:border-brand-blue transition-all duration-500">
+                <ScrollReveal key={idx} delay={idx * 0.05} className="group bg-brand-gray-light p-6 md:p-8 border border-brand-gray-medium hover:bg-brand-yellow hover:border-brand-yellow transition-all duration-500">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-2 h-8 bg-brand-yellow"></div>
-                    <h3 className="text-xl text-brand-blue group-hover:text-brand-yellow transition-colors">{service.title}</h3>
+                    <div className="w-2 h-8 bg-brand-black"></div>
+                    <h3 className="text-xl text-brand-black group-hover:text-brand-black transition-colors">{service.title}</h3>
                   </div>
-                  <p className="text-gray-600 group-hover:text-gray-300 transition-colors text-sm leading-relaxed">{service.desc}</p>
+                  <p className="text-gray-600 group-hover:text-brand-black/70 transition-colors text-sm leading-relaxed">{service.desc}</p>
                 </ScrollReveal>
               ))}
             </div>
 
-            <ScrollReveal className="mt-16 p-8 bg-brand-blue text-white flex flex-col md:flex-row items-center justify-between gap-8">
-              <p className="text-xl font-medium">{t.services.footer}</p>
-              <a href="#contato" className="bg-brand-yellow text-brand-blue font-bold px-8 py-4 hover:bg-white transition-colors whitespace-nowrap">{t.services.cta}</a>
+            <ScrollReveal className="mt-16 p-8 bg-brand-yellow text-brand-black flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+              <div className="flex items-start gap-4">
+                <ArrowRight className="w-8 h-8 flex-shrink-0 mt-0.5" />
+                <p className="text-xl font-bold uppercase tracking-tight leading-tight">{t.services.footer}</p>
+              </div>
+              <a 
+                href="https://wa.me/5547999911880" 
+                target="_blank" 
+                rel="noreferrer"
+                className="bg-brand-black text-white font-bold px-8 py-4 hover:bg-white hover:text-brand-black transition-colors whitespace-nowrap"
+              >
+                {t.services.cta}
+              </a>
             </ScrollReveal>
           </div>
         </section>
 
         {/* --- DIFERENCIAL --- */}
-        <section className="py-16 md:py-24 bg-brand-blue text-white relative">
+        <section className="py-16 md:py-24 bg-brand-yellow text-brand-black relative">
           <div className="container mx-auto px-4 md:px-12 grid md:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
-              <h2 className="text-3xl md:text-5xl mb-8">{t.differentials.title}</h2>
-              <p className="text-brand-yellow text-lg md:text-xl mb-12 font-medium">{t.differentials.subtitle}</p>
+              <h2 className="text-3xl md:text-5xl mb-8 text-brand-black">{t.differentials.title}</h2>
+              <p className="text-brand-black font-black text-lg md:text-xl mb-12 uppercase tracking-wider opacity-70">{t.differentials.subtitle}</p>
               
               <ul className="space-y-6">
                 {t.differentials.items.map((item: string, idx: number) => (
                   <li key={idx} className="flex items-start gap-4">
-                    <div className="mt-1 bg-brand-yellow rounded-full p-1 flex-shrink-0">
-                      <CheckCircle2 size={16} className="text-brand-blue" />
+                    <div className="mt-1 bg-brand-black rounded-full p-1 flex-shrink-0 shadow-sm">
+                      <CheckCircle2 size={16} className="text-brand-yellow" />
                     </div>
-                    <span className="text-base md:text-lg text-gray-200">{item}</span>
+                    <span className="text-base md:text-lg text-brand-black font-semibold">{item}</span>
                   </li>
                 ))}
               </ul>
 
               <div className="mt-12 md:mt-16">
-                <p className="text-xl md:text-3xl font-display font-black text-brand-yellow italic">{t.differentials.quote}</p>
+                <p className="text-xl md:text-3xl font-display font-black text-brand-black italic drop-shadow-sm">{t.differentials.quote}</p>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={0.3} className="relative">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
-                  <div className="h-64 bg-brand-yellow/10 rounded-sm overflow-hidden">
+                  <div className="h-64 bg-brand-black/10 rounded-sm overflow-hidden border border-brand-black/20">
                     <img 
                       src={DIFFERENTIAL_IMG} 
                       alt="Diferencial" 
@@ -409,15 +421,15 @@ export default function App() {
                       referrerPolicy="no-referrer"
                     />
                   </div>
-                  <div className="h-40 bg-brand-yellow rounded-sm flex items-center justify-center p-6">
-                     <ShieldCheck size={64} className="text-brand-blue" />
+                  <div className="h-40 bg-brand-black rounded-sm flex items-center justify-center p-6 shadow-xl">
+                     <ShieldCheck size={64} className="text-brand-yellow" />
                   </div>
                 </div>
                 <div className="space-y-4 pt-12">
-                  <div className="h-40 bg-white/10 rounded-sm flex items-center justify-center p-6">
+                  <div className="h-40 bg-white rounded-sm flex items-center justify-center p-6 shadow-xl">
                      <Award size={64} className="text-brand-yellow" />
                   </div>
-                  <div className="h-64 bg-brand-yellow/10 rounded-sm overflow-hidden">
+                  <div className="h-64 bg-brand-black/10 rounded-sm overflow-hidden border border-brand-black/20">
                     <img 
                       src={DIFFERENTIAL_IMG_2} 
                       alt="Diferencial 2" 
@@ -435,7 +447,7 @@ export default function App() {
         <section className="py-16 md:py-24 bg-white overflow-hidden">
           <div className="container mx-auto px-4 md:px-12 mb-12 md:mb-16 text-center">
             <ScrollReveal>
-              <h2 className="text-3xl md:text-4xl mb-4 text-brand-blue">{t.clients.title}</h2>
+              <h2 className="text-3xl md:text-4xl mb-4 text-brand-black">{t.clients.title}</h2>
               <p className="text-gray-600 text-base md:text-lg">{t.clients.desc}</p>
             </ScrollReveal>
           </div>
@@ -444,11 +456,11 @@ export default function App() {
             <div className="flex animate-infinite-scroll w-fit">
               {[...CLIENTS, ...CLIENTS].map((client, idx) => (
                 <div key={idx} className="flex-shrink-0 w-32 md:w-64 px-2 md:px-4">
-                  <div className="bg-brand-gray-light h-24 md:h-40 flex items-center justify-center p-4 md:p-6 transition-all duration-500 border border-transparent hover:border-brand-yellow/30">
+                  <div className="bg-brand-gray-light h-24 md:h-40 flex items-center justify-center p-4 md:p-6 transition-all duration-500 border border-transparent hover:border-brand-yellow/50 shadow-sm hover:shadow-md">
                     <img 
                       src={client.logo} 
                       alt={client.name} 
-                      className="max-h-full max-w-full object-contain" 
+                      className="max-h-full max-w-full object-contain transition-all" 
                       referrerPolicy="no-referrer"
                     />
                   </div>
@@ -462,7 +474,7 @@ export default function App() {
           </div>
           
           <div className="text-center mt-12">
-            <p className="text-brand-blue font-bold tracking-widest uppercase text-sm opacity-40">{t.authority.partners}</p>
+            <p className="text-brand-black font-bold tracking-widest uppercase text-xs opacity-30">{t.authority.partners}</p>
           </div>
         </section>
 
@@ -470,7 +482,7 @@ export default function App() {
         <section id="equipe" className="py-16 md:py-24 bg-white overflow-hidden">
           <div className="container mx-auto px-4 md:px-12 mb-12 md:mb-16 text-center">
             <ScrollReveal>
-              <h2 className="text-3xl md:text-4xl mb-4 text-brand-blue">{t.team.title}</h2>
+              <h2 className="text-3xl md:text-4xl mb-4 text-brand-black">{t.team.title}</h2>
               <p className="text-gray-600 text-base md:text-lg">{t.team.desc}</p>
             </ScrollReveal>
           </div>
@@ -519,63 +531,73 @@ export default function App() {
           <div className="container mx-auto px-4 md:px-12">
             <div className="grid lg:grid-cols-2 gap-12 md:gap-16">
               <ScrollReveal>
-                <h2 className="text-3xl md:text-5xl mb-6 text-brand-blue">{t.contact.title}</h2>
-                <p className="text-lg md:text-2xl text-brand-blue font-light mb-12">{t.contact.desc}</p>
+                <h2 className="text-3xl md:text-5xl mb-6 text-brand-black">{t.contact.title}</h2>
+                <p className="text-lg md:text-2xl text-brand-black font-light mb-12 whitespace-pre-line leading-relaxed">{t.contact.desc}</p>
                 
                 <div className="space-y-6 md:space-y-8 mb-12">
                   <div className="flex items-center gap-4 md:gap-6 group">
-                    <div className="w-12 h-12 md:w-14 md:h-14 bg-brand-blue text-brand-yellow flex items-center justify-center rounded-full group-hover:bg-brand-yellow group-hover:text-brand-blue transition-colors flex-shrink-0">
+                    <div className="w-12 h-12 md:w-14 md:h-14 bg-brand-black text-brand-yellow flex items-center justify-center rounded-full group-hover:bg-brand-yellow group-hover:text-brand-black transition-colors flex-shrink-0">
                       <Phone size={20} className="md:w-6 md:h-6" />
                     </div>
                     <div>
                       <p className="text-[10px] md:text-xs uppercase tracking-widest text-gray-500 font-bold">{t.contact.phone}</p>
-                      <p className="text-lg md:text-xl font-bold text-brand-blue">(47) 99991-1880</p>
+                      <p className="text-lg md:text-xl font-bold text-brand-black">(47) 99991-1880</p>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-4 md:gap-6 group">
-                    <div className="w-12 h-12 md:w-14 md:h-14 bg-brand-blue text-brand-yellow flex items-center justify-center rounded-full group-hover:bg-brand-yellow group-hover:text-brand-blue transition-colors flex-shrink-0">
+                    <div className="w-12 h-12 md:w-14 md:h-14 bg-brand-black text-brand-yellow flex items-center justify-center rounded-full group-hover:bg-brand-yellow group-hover:text-brand-black transition-colors flex-shrink-0">
                       <Mail size={20} className="md:w-6 md:h-6" />
                     </div>
                     <div>
                       <p className="text-[10px] md:text-xs uppercase tracking-widest text-gray-500 font-bold">{t.contact.email}</p>
-                      <p className="text-lg md:text-xl font-bold text-brand-blue break-all">contato@terraplanagemplan.com</p>
+                      <p className="text-lg md:text-xl font-bold text-brand-black break-all">contato@terraplanagemplan.com</p>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-4 md:gap-6 group">
-                    <div className="w-12 h-12 md:w-14 md:h-14 bg-brand-blue text-brand-yellow flex items-center justify-center rounded-full group-hover:bg-brand-yellow group-hover:text-brand-blue transition-colors flex-shrink-0">
+                    <div className="w-12 h-12 md:w-14 md:h-14 bg-brand-black text-brand-yellow flex items-center justify-center rounded-full group-hover:bg-brand-yellow group-hover:text-brand-black transition-colors flex-shrink-0">
                       <MapPin size={20} className="md:w-6 md:h-6" />
                     </div>
                     <div>
                       <p className="text-[10px] md:text-xs uppercase tracking-widest text-gray-500 font-bold">{t.contact.location}</p>
-                      <p className="text-lg md:text-xl font-bold text-brand-blue">{t.contact.address}</p>
+                      <p className="text-lg md:text-xl font-bold text-brand-black">{t.contact.address}</p>
                     </div>
                   </div>
                 </div>
 
+                <div className="mb-8 space-y-3">
+                  {t.contact.benefits.map((benefit: string, idx: number) => (
+                    <div key={idx} className="flex items-center gap-2 text-brand-black font-bold">
+                      <span className="text-xl">✔️</span>
+                      <span className="text-base uppercase tracking-wider">{benefit}</span>
+                    </div>
+                  ))}
+                </div>
+
                 <div className="mb-12">
+                  <p className="text-brand-black font-bold text-lg mb-4">{t.contact.requestPhrase}</p>
                   <a 
                     href="https://wa.me/5547999911880" 
                     target="_blank" 
                     rel="noreferrer"
-                    className="inline-flex items-center gap-3 bg-[#25D366] text-white font-black px-10 py-5 rounded-sm hover:scale-105 transition-transform shadow-lg"
+                    className="inline-flex items-center gap-3 bg-[#25D366] text-white font-black px-10 py-5 rounded-sm hover:scale-105 transition-transform shadow-lg group"
                   >
-                    <Phone size={20} />
+                    <Phone size={20} className="group-hover:animate-pulse" />
                     {t.contact.whatsapp}
                   </a>
                 </div>
 
                 <div className="pt-8 border-t border-brand-gray-medium opacity-60 hover:opacity-100 transition-opacity">
-                  <p className="text-sm font-bold text-brand-blue uppercase tracking-widest mb-2">{t.contact.report}</p>
-                  <a href={`mailto:${t.contact.ethicsEmail}`} className="text-gray-600 hover:text-brand-blue transition-colors">
+                  <p className="text-sm font-bold text-brand-black uppercase tracking-widest mb-2">{t.contact.report}</p>
+                  <a href={`mailto:${t.contact.ethicsEmail}`} className="text-gray-600 hover:text-brand-black transition-colors">
                     {t.contact.ethicsEmail}
                   </a>
                 </div>
               </ScrollReveal>
 
-              <ScrollReveal delay={0.3} className="h-full min-h-[400px] bg-brand-gray-medium relative overflow-hidden shadow-2xl">
-                <div className="absolute inset-0 bg-brand-blue/10 z-10 pointer-events-none"></div>
+              <ScrollReveal delay={0.3} className="aspect-square bg-brand-gray-medium relative overflow-hidden shadow-2xl lg:max-w-xl lg:self-start">
+                <div className="absolute inset-0 bg-brand-black/5 z-10 pointer-events-none"></div>
                 <iframe 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3562.385368945678!2d-49.268609!3d-26.8111258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94defba7258c5091%3A0x1559d5d3153f4edb!2sTerraplanagem%20PLAN!5e0!3m2!1spt-BR!2sbr!4v1713100000000!5m2!1spt-BR!2sbr" 
                   className="w-full h-full border-0"
@@ -590,27 +612,28 @@ export default function App() {
       </main>
 
       {/* --- FOOTER --- */}
-      <footer className="bg-brand-blue text-white py-12 border-t border-white/10">
+      <footer className="bg-brand-black text-white py-16 border-t border-brand-yellow/30">
         <div className="container mx-auto px-4 md:px-12">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="flex flex-col items-center md:items-start gap-6">
-              <div className="bg-white p-4 shadow-lg">
-                <img src={LOGO_URL} alt="Logo" className="h-16 md:h-20 object-contain" referrerPolicy="no-referrer" />
+          <div className="flex flex-col md:flex-row justify-between items-center gap-12">
+            <div className="flex flex-col items-center md:items-start gap-8">
+              <div className="bg-white p-6 shadow-2xl rounded-sm">
+                <img src={LOGO_URL} alt="Logo" className="h-20 md:h-24 object-contain" referrerPolicy="no-referrer" />
               </div>
-              <p className="text-sm opacity-60 max-w-xs text-center md:text-left">
+              <p className="text-sm opacity-70 max-w-xs text-center md:text-left leading-relaxed">
                 {t.footer.desc}
               </p>
             </div>
             
-            <div className="flex gap-8 text-sm font-bold tracking-widest">
-              <a href="#sobre" className="hover:text-brand-yellow transition-colors">{t.footer.about}</a>
-              <a href="#servicos" className="hover:text-brand-yellow transition-colors">{t.footer.services}</a>
-              <a href="#contato" className="hover:text-brand-yellow transition-colors">{t.footer.contact}</a>
+            <div className="flex flex-wrap justify-center gap-8 md:gap-12 text-sm font-bold tracking-widest">
+              <a href="#sobre" className="hover:text-brand-yellow transition-colors border-b-2 border-transparent hover:border-brand-yellow pb-1">{t.footer.about}</a>
+              <a href="#servicos" className="hover:text-brand-yellow transition-colors border-b-2 border-transparent hover:border-brand-yellow pb-1">{t.footer.services}</a>
+              <a href="#contato" className="hover:text-brand-yellow transition-colors border-b-2 border-transparent hover:border-brand-yellow pb-1">{t.footer.contact}</a>
             </div>
 
-            <div className="text-center md:text-right">
-              <p className="text-xs opacity-40 uppercase tracking-widest mb-2">{t.footer.rights}</p>
-              <p className="text-xs opacity-40 uppercase tracking-widest">{t.footer.allRights}</p>
+            <div className="text-center md:text-right space-y-2">
+              <p className="text-[10px] opacity-50 uppercase tracking-[0.2em] mb-4">{t.footer.rights}</p>
+              <div className="w-24 h-px bg-brand-yellow/30 ml-auto hidden md:block"></div>
+              <p className="text-[10px] opacity-50 uppercase tracking-[0.2em]">{t.footer.allRights}</p>
             </div>
           </div>
         </div>
