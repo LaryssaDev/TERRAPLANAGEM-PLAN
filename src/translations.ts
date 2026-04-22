@@ -2,8 +2,11 @@ export const translations = {
   pt: {
     nav: {
       about: "QUEM SOMOS",
-      technical: "LAUDO TÉCNICO",
-      commercial: "LAUDO COMERCIAL",
+      aboutUs: "Sobre Nós",
+      company: "Empresa",
+      society: "Sociedade",
+      governance: "Governança",
+      mvv: "MISSÃO, VISÃO E VALORES",
       teamNav: "EQUIPE",
       contact: "Contato",
       langPt: "PORTUGUÊS",
@@ -31,40 +34,88 @@ export const translations = {
         "Seguimos em constante evolução, com o compromisso de sermos referência em terraplanagem e infraestrutura, atuando com seriedade, eficiência e consistência em cada obra."
       ]
     },
+    mvv: {
+      title: "Missão, Visão e Valores",
+      trajectory: {
+        title: "Nossa Trajetória",
+        subtitle: "A evolução da Terraplanagem Plan construída com responsabilidade e excelência.",
+        items: [
+          {
+            year: "2024",
+            title: "Início e estruturação da operação",
+            text: "Início das atividades da Terraplanagem Plan, com foco em serviços de terraplanagem e atendimento a demandas locais. Neste período, a empresa estrutura sua base operacional, define as áreas estratégicas entre os sócios e estabelece um modelo de atuação com foco em organização, qualidade e eficiência.",
+            img: "https://i.imgur.com/YnNIwp9.jpeg"
+          },
+          {
+            year: "2025",
+            title: "Expansão regional e atuação em novos mercados",
+            text: "Ampliação da atuação para Timbó/SC e região, consolidando presença no Médio Vale do Itajaí. A empresa expande seu portfólio de serviços, passando a atender limpeza de áreas, manutenção e apoio operacional. Além disso, inicia atendimentos fora da região de origem, alcançando outros municípios e estados.",
+            img: "https://i.imgur.com/XfRNTcu.jpeg"
+          },
+          {
+            year: "2026",
+            title: "Consolidação e posicionamento estratégico",
+            text: "Fase de consolidação como empresa de soluções em terraplanagem e serviços operacionais. Atuação em projetos estruturados, contratos de maior porte e fortalecimento da gestão, com foco em padronização, produtividade e crescimento sustentável.",
+            footer: "Evoluindo continuamente para atender demandas cada vez mais complexas com eficiência, segurança e qualidade.",
+            img: "https://i.imgur.com/ylFs2SK.png"
+          }
+        ]
+      },
+      mission: {
+        title: "Missão",
+        text: "Executar serviços de terraplanagem e serviços operacionais com eficiência, segurança e responsabilidade, oferecendo soluções completas para preparação, manutenção e organização de áreas, atendendo às demandas de cada cliente com qualidade, agilidade e excelência."
+      },
+      vision: {
+        title: "Visão",
+        text: "Ser reconhecida como uma empresa referência em terraplanagem e serviços integrados para infraestrutura e áreas operacionais, destacando-se pela confiabilidade, produtividade e capacidade de atender diferentes demandas com alto padrão de entrega."
+      },
+      values: {
+        title: "Valores",
+        items: [
+          { bold: "Compromisso com resultados", text: "Entregar serviços com qualidade, dentro dos prazos e conforme as necessidades do cliente." },
+          { bold: "Versatilidade operacional", text: "Atuar com flexibilidade para atender diferentes tipos de serviços, desde terraplanagem até atividades de apoio, manutenção e organização de áreas." },
+          { bold: "Eficiência e produtividade", text: "Buscar continuamente a otimização de recursos, processos e equipes para garantir maior desempenho nas operações." },
+          { bold: "Segurança e conformidade", text: "Atuar com foco na segurança das pessoas e no cumprimento das normas técnicas e regulamentadoras." },
+          { bold: "Responsabilidade ambiental", text: "Executar os serviços com respeito ao meio ambiente, adotando práticas conscientes e sustentáveis." },
+          { bold: "Ética e transparência", text: "Manter relações baseadas na confiança, clareza e profissionalismo com clientes, parceiros e equipe." },
+          { bold: "Valorização das pessoas", text: "Reconhecer a importância da equipe como base para a entrega de resultados consistentes." }
+        ]
+      }
+    },
         structure: {
-      title: "Estrutura da Empresa",
+      title: "Como nos organizamos",
       subtitle: "Uma gestão forte começa com papéis bem definidos",
       badge: "Excelência em cada detalhe",
       members: [
-        { name: "Angélica", role: "Financeiro & Gestão Interna", desc: "Garante organização, controle e crescimento sustentável através do relacionamento próximo com clientes." },
-        { name: "Pablo", role: "Operações em Campo", desc: "Coordena a equipe técnica e assegura a qualidade, eficiência e segurança máxima em todas as execuções." },
-        { name: "Gilmar", role: "Planejamento Estratégico", desc: "Focado na expansão da empresa, parcerias estratégicas e prospecção de novos negócios." }
+        { name: "Administração", role: "Gestão Interna & Financeira", desc: "Garante organização, controle e crescimento sustentável através do relacionamento próximo com clientes." },
+        { name: "Operação", role: "Execução em Campo", desc: "Coordena a equipe técnica e assegura a qualidade, eficiência e segurança máxima em todas as execuções." },
+        { name: "Estratégico", role: "Planejamento & Novos Negócios", desc: "Focado na expansão da empresa, parcerias estratégicas e prospecção de novos negócios." }
       ],
       footer: "Cada um na sua função, todos com o mesmo objetivo: entregar excelência e crescer com consistência."
     },
     authority: {
-      title: "Experiência / Autoridade",
+      title: "Experiência que gera confiança",
       desc: "Atuamos em projetos relevantes, garantindo soluções que atendem aos mais altos padrões de exigência do mercado de energia e infraestrutura.",
       partners: "Entre outros parceiros de sucesso"
     },
     services: {
       tag: "O QUE FAZEMOS",
       title: "Serviços",
-      desc: "Soluções técnicas em terraplanagem e infraestrutura, com execução mecanizada, controle operacional e foco em desempenho.\nAtendemos projetos com alto nível de exigência, garantindo produtividade, segurança e confiabilidade em cada etapa da execução.",
+      desc: "Execução de serviços de terraplanagem, infraestrutura e manutenção de áreas técnicas com alta produtividade mecanizada e conformidade ambiental",
       items: [
-        { title: "Terraplanagem em geral", desc: "Nivelamento, aterros e escavações de alta precisão." },
-        { title: "Acessos Técnicos", desc: "Abertura e manutenção de vias para operações industriais e técnicas." },
-        { title: "Torres de Transmissão", desc: "Conservação e limpeza ao redor de estruturas de energia." },
-        { title: "Recuperação Ambiental", desc: "Execução de PRAD para áreas degradadas com foco em sustentabilidade." },
-        { title: "Controle de Erosão", desc: "Plantio de grama e técnicas de contenção de solo." },
-        { title: "Gabiões e Enrocamentos", desc: "Construção de estruturas de contenção robustas." },
-        { title: "Drenagem e Tubulações", desc: "Instalação de sistemas eficientes de escoamento de águas." },
-        { title: "Demolições e Limpeza", desc: "Preparação de terrenos com remoção de estruturas e resíduos." },
-        { title: "Manutenção de Tubulões", desc: "Serviços especializados em fundações e estruturas enterradas." },
-        { title: "Roçadas manual e mecanizada", desc: "Manutenção de vegetação em grandes áreas e faixas de servidão." }
+        { title: "Terraplanagem e Movimentação de Solo", desc: "Execução de nivelamento, cortes, aterros e escavações com controle técnico e uso de equipamentos mecanizados, garantindo precisão, produtividade e estabilidade do terreno para diferentes tipos de obra." },
+        { title: "Abertura e Manutenção de Acessos", desc: "Implantação e conservação de acessos técnicos e operacionais, com adequação do terreno para circulação segura de veículos, máquinas e equipes em áreas industriais e de infraestrutura." },
+        { title: "Manutenção de Faixas e Estruturas de Energia", desc: "Serviços de conservação, limpeza e adequação de áreas ao redor de torres e linhas de transmissão, assegurando acesso, segurança operacional e conformidade com normas do setor elétrico." },
+        { title: "Recuperação Ambiental", desc: "Execução de PRAD (Projeto de Recuperação de Áreas Degradadas), com aplicação de técnicas ambientais para recomposição do solo, controle de impactos e restauração sustentável das áreas." },
+        { title: "Controle de Erosão e Estabilização de Solo", desc: "Aplicação de soluções para contenção e estabilização do solo, incluindo plantio de grama, proteção superficial e técnicas que reduzem processos erosivos e aumentam a durabilidade do terreno." },
+        { title: "Gabiões e Enrocamentos", desc: "Construção de estruturas de contenção com gabiões e enrocamentos, garantindo estabilidade de taludes, proteção contra erosão e segurança em áreas com risco de deslizamento." },
+        { title: "Drenagem e Tubulações", desc: "Instalação de sistemas de drenagem e tubulações para controle eficiente do escoamento de águas pluviais, prevenindo alagamentos e preservando a integridade das estruturas." },
+        { title: "Demolições e Limpeza", desc: "Execução de demolições controladas e limpeza técnica de áreas, com remoção de estruturas e resíduos, preparando o terreno para novas etapas construtivas com segurança e eficiência." },
+        { title: "Manutenção de Tubulões", desc: "Serviços especializados em manutenção e adequação de tubulões e fundações profundas, garantindo estabilidade estrutural e conformidade com padrões técnicos exigidos." },
+        { title: "Roçadas manual e mecanizada", desc: "Execução de roçadas em áreas extensas, faixas de servidão e terrenos técnicos, utilizando métodos manuais e mecanizados para garantir limpeza, segurança e conservação das áreas." }
       ],
-      footer: "Atuamos com foco em segurança, durabilidade e conformidade ambiental.",
-      cta: "Solicitar Orçamento"
+      footer: "Operamos com foco em produtividade, segurança e conformidade ambiental, entregando soluções eficientes para cada tipo de terreno e operação",
+      cta: "Solicitar avaliação técnica"
     },
     differentials: {
       title: "Nosso Diferencial",
@@ -81,7 +132,7 @@ export const translations = {
     },
     clients: {
       title: "Nossos Clientes",
-      desc: "Empresas que confiam no nosso trabalho e excelência operacional."
+      desc: "Clientes e parceiros que validam nossa capacidade operacional"
     },
     team: {
       title: "Equipe em Ação",
@@ -118,8 +169,11 @@ export const translations = {
   en: {
     nav: {
       about: "ABOUT US",
-      technical: "TECHNICAL REPORT",
-      commercial: "COMMERCIAL REPORT",
+      aboutUs: "About Us",
+      company: "Company",
+      society: "Society",
+      governance: "Governance",
+      mvv: "MISSION, VISION AND VALUES",
       teamNav: "TEAM",
       contact: "Contact",
       langPt: "PORTUGUESE",
@@ -147,40 +201,88 @@ export const translations = {
         "We continue to constantly evolve, with the commitment to be a reference in earthmoving and infrastructure, acting with seriousness, efficiency, and consistency in each project."
       ]
     },
+    mvv: {
+      title: "Mission, Vision and Values",
+      trajectory: {
+        title: "Our Trajectory",
+        subtitle: "The evolution of Terraplanagem Plan built with responsibility and excellence.",
+        items: [
+          {
+            year: "2024",
+            title: "Start and operation structuring",
+            text: "Start of Terraplanagem Plan activities, focusing on earthmoving services and meeting local demands. During this period, the company structures its operational base, defines strategic areas among partners, and establishes an action model focused on organization, quality, and efficiency.",
+            img: "https://i.imgur.com/YnNIwp9.jpeg"
+          },
+          {
+            year: "2025",
+            title: "Regional expansion and operation in new markets",
+            text: "Expansion of activities to Timbó/SC and the region, consolidating presence in the Médio Vale do Itajaí. The company expands its service portfolio, starting to meet demands for area cleaning, maintenance, and operational support. In addition, it starts serving outside its region of origin, reaching other municipalities and states.",
+            img: "https://i.imgur.com/XfRNTcu.jpeg"
+          },
+          {
+            year: "2026",
+            title: "Consolidation and strategic positioning",
+            text: "Consolidation phase as an earthmoving and operational services solutions company. Acting in structured projects, larger contracts, and strengthening management, with a focus on standardization, productivity, and sustainable growth.",
+            footer: "Continuously evolving to meet increasingly complex demands with efficiency, safety, and quality.",
+            img: "https://i.imgur.com/ylFs2SK.png"
+          }
+        ]
+      },
+      mission: {
+        title: "Mission",
+        text: "To execute earthmoving and operational services with efficiency, safety, and responsibility, offering complete solutions for area preparation, maintenance, and organization, meeting each client's demands with quality, agility, and excellence."
+      },
+      vision: {
+        title: "Vision",
+        text: "To be recognized as a reference company in earthmoving and integrated services for infrastructure and operational areas, standing out for reliability, productivity, and the capacity to meet different demands with a high standard of delivery."
+      },
+      values: {
+        title: "Values",
+        items: [
+          { bold: "Commitment to results", text: "Delivering quality services, within deadlines and according to the client's needs." },
+          { bold: "Operational versatility", text: "Acting with flexibility to serve different types of services, from earthmoving to support activities, maintenance, and area organization." },
+          { bold: "Efficiency and productivity", text: "Continuously seeking to optimize resources, processes, and teams to ensure greater performance in operations." },
+          { bold: "Safety and compliance", text: "Acting with a focus on people's safety and compliance with technical and regulatory standards." },
+          { bold: "Environmental responsibility", text: "Executing services with respect for the environment, adopting conscious and sustainable practices." },
+          { bold: "Ethics and transparency", text: "Maintaining relationships based on trust, clarity, and professionalism with clients, partners, and the team." },
+          { bold: "Valuing people", text: "Recognizing the importance of the team as the basis for delivering consistent results." }
+        ]
+      }
+    },
     structure: {
-      title: "Company Structure",
+      title: "How we organize ourselves",
       subtitle: "Strong management starts with well-defined roles",
       badge: "Excellence in every detail",
       members: [
-        { name: "Angélica", role: "Finance & Internal Management", desc: "Ensures organization, control, and sustainable growth through close relationships with clients." },
-        { name: "Pablo", role: "Field Operations", desc: "Coordinates the technical team and ensures maximum quality, efficiency, and safety in all executions." },
-        { name: "Gilmar", role: "Strategic Planning", desc: "Focused on company expansion, strategic partnerships, and prospecting for new business." }
+        { name: "Administration", role: "Internal & Financial Management", desc: "Ensures organization, control, and sustainable growth through close relationships with clients." },
+        { name: "Operations", role: "Field Execution", desc: "Coordinates the technical team and ensures maximum quality, efficiency, and safety in all executions." },
+        { name: "Strategic", role: "Planning & New Business", desc: "Focused on company expansion, strategic partnerships, and prospecting for new business." }
       ],
       footer: "Each in their role, all with the same goal: to deliver excellence and grow with consistency."
     },
     authority: {
-      title: "Experience / Authority",
+      title: "Experience that builds trust",
       desc: "We operate in relevant projects, ensuring solutions that meet the highest standards of the energy and infrastructure market.",
       partners: "Among other successful partners"
     },
     services: {
       tag: "WHAT WE DO",
       title: "Services",
-      desc: "Technical solutions in earthmoving and infrastructure, with mechanized execution, operational control and focus on performance.\nWe serve projects with a high level of demand, ensuring productivity, safety and reliability in each stage of execution.",
+      desc: "Execution of earthmoving, infrastructure, and technical area maintenance services with high mechanized productivity and environmental compliance",
       items: [
-        { title: "General Earthmoving", desc: "High-precision leveling, fills, and excavations." },
-        { title: "Technical Access", desc: "Opening and maintenance of roads for industrial and technical operations." },
-        { title: "Transmission Towers", desc: "Conservation and cleaning around energy structures." },
-        { title: "Environmental Recovery", desc: "Execution of PRAD for degraded areas with a focus on sustainability." },
-        { title: "Erosion Control", desc: "Grass planting and soil containment techniques." },
-        { title: "Gabions and Riprap", desc: "Construction of robust containment structures." },
-        { title: "Drainage and Piping", desc: "Installation of efficient water runoff systems." },
-        { title: "Demolition and Cleaning", desc: "Site preparation with removal of structures and waste." },
-        { title: "Caisson Maintenance", desc: "Specialized services in foundations and buried structures." },
-        { title: "Manual and mechanized mowing", desc: "Vegetation maintenance in large areas and right-of-way strips." }
+        { title: "Earthmoving and Soil Handling", desc: "Execution of leveling, cuts, fills, and excavations with technical control and use of mechanized equipment, ensuring precision, productivity, and stability of the terrain for different types of work." },
+        { title: "Opening and Maintenance of Accesses", desc: "Implementation and conservation of technical and operational accesses, with terrain adaptation for safe circulation of vehicles, machines, and teams in industrial and infrastructure areas." },
+        { title: "Maintenance of Energy Strips and Structures", desc: "Conservation, cleaning, and adaptation services for areas around transmission towers and lines, ensuring access, operational safety, and compliance with electricity sector standards." },
+        { title: "Environmental Recovery", desc: "Execution of PRAD (Degraded Area Recovery Project), with application of environmental techniques for soil recomposition, impact control, and sustainable restoration of areas." },
+        { title: "Erosion Control and Soil Stabilization", desc: "Application of solutions for soil containment and stabilization, including grass planting, surface protection, and techniques that reduce erosive processes and increase terrain durability." },
+        { title: "Gabions and Riprap", desc: "Construction of containment structures with gabions and riprap, ensuring slope stability, protection against erosion, and safety in areas with landslide risk." },
+        { title: "Drainage and Piping", desc: "Installation of drainage systems and piping for efficient control of rainwater runoff, preventing flooding and preserving structural integrity." },
+        { title: "Demolition and Cleaning", desc: "Execution of controlled demolitions and technical area cleaning, with removal of structures and waste, preparing the ground for new construction stages with safety and efficiency." },
+        { title: "Caisson Maintenance", desc: "Specialized services in maintenance and adaptation of caissons and deep foundations, ensuring structural stability and compliance with required technical standards." },
+        { title: "Manual and mechanized mowing", desc: "Execution of mowing in large areas, right-of-way strips, and technical grounds, using manual and mechanized methods to ensure cleanliness, safety, and conservation of the areas." }
       ],
-      footer: "We operate with a focus on safety, durability, and environmental compliance.",
-      cta: "Request Quote"
+      footer: "We operate with a focus on productivity, safety, and environmental compliance, delivering efficient solutions for every type of terrain and operation",
+      cta: "Request technical evaluation"
     },
     differentials: {
       title: "Our Differential",
@@ -197,7 +299,7 @@ export const translations = {
     },
     clients: {
       title: "Our Clients",
-      desc: "Companies that trust our work and operational excellence."
+      desc: "Clients and partners who validate our operational capacity"
     },
     team: {
       title: "Team in Action",
