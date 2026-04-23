@@ -60,6 +60,32 @@ const CLIENTS = [
   { name: "Paternolli", logo: "https://i.imgur.com/1pl1D2I.png" },
 ];
 
+const HOW_WE_WORK_ROW1 = [
+  "https://i.imgur.com/Dp87YpR.jpeg",
+  "https://i.imgur.com/NgG1mmK.jpeg",
+  "https://i.imgur.com/EDdyzfY.jpeg",
+  "https://i.imgur.com/nuF42LU.jpeg",
+  "https://i.imgur.com/uHiRdPq.jpeg",
+  "https://i.imgur.com/R6dXc6S.jpeg",
+  "https://i.imgur.com/eUBbNLr.jpeg",
+  "https://i.imgur.com/QTVVlgs.jpeg",
+  "https://i.imgur.com/8Gy6xpf.jpeg",
+  "https://i.imgur.com/sNzUMjN.jpeg",
+];
+
+const HOW_WE_WORK_ROW2 = [
+  "https://i.imgur.com/wTwQz95.jpeg",
+  "https://i.imgur.com/xs1rXv8.jpeg",
+  "https://i.imgur.com/YHwZKb4.jpeg",
+  "https://i.imgur.com/NDiGmtt.jpeg",
+  "https://i.imgur.com/CBq8cUS.jpeg",
+  "https://i.imgur.com/C3iep6q.jpeg",
+  "https://i.imgur.com/Nq3KD3B.jpeg",
+  "https://i.imgur.com/DgJMmi7.jpeg",
+  "https://i.imgur.com/qe1erV9.jpeg",
+  "https://i.imgur.com/vnykCMD.jpeg",
+];
+
 const Navbar = ({ lang, setLang, t }: { lang: 'pt' | 'en', setLang: (l: 'pt' | 'en') => void, t: any }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -90,6 +116,8 @@ const Navbar = ({ lang, setLang, t }: { lang: 'pt' | 'en', setLang: (l: 'pt' | '
         { name: t.nav.mvv, to: '/institucional', type: 'route' },
       ]
     },
+    { name: t.nav.teamInAction, to: '/#equipe', type: 'anchor' },
+    { name: t.nav.contact.toUpperCase(), to: '/#contato', type: 'anchor' },
   ];
 
   const handleLinkClick = (link: any) => {
@@ -334,6 +362,8 @@ export default function App() {
               DIFFERENTIAL_IMG_2={DIFFERENTIAL_IMG_2}
               TEAM_IMAGES_ROW1={TEAM_IMAGES_ROW1}
               TEAM_IMAGES_ROW2={TEAM_IMAGES_ROW2}
+              HOW_WE_WORK_ROW1={HOW_WE_WORK_ROW1}
+              HOW_WE_WORK_ROW2={HOW_WE_WORK_ROW2}
               CLIENTS={CLIENTS}
             />
           } />

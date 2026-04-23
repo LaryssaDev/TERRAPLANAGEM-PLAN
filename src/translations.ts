@@ -8,6 +8,7 @@ export const translations = {
       governance: "Governança",
       mvv: "MISSÃO, VISÃO E VALORES",
       teamNav: "EQUIPE",
+      teamInAction: "EQUIPE EM AÇÃO",
       contact: "Contato",
       langPt: "PORTUGUÊS",
       langEn: "ENGLISH"
@@ -139,6 +140,10 @@ export const translations = {
       title: "Nossos Clientes",
       desc: "Clientes e parceiros que validam nossa capacidade operacional"
     },
+    howWeWork: {
+      title: "Como Trabalhamos",
+      desc: "Transformação de terrenos através de processos técnicos e excelência operacional (Antes e Depois)"
+    },
     team: {
       title: "Equipe em Ação",
       desc: "Nossa equipe trabalhando com dedicação e segurança em diversos projetos.",
@@ -180,6 +185,7 @@ export const translations = {
       governance: "Governance",
       mvv: "MISSION, VISION AND VALUES",
       teamNav: "TEAM",
+      teamInAction: "TEAM IN ACTION",
       contact: "Contact",
       langPt: "PORTUGUESE",
       langEn: "ENGLISH"
@@ -310,6 +316,10 @@ export const translations = {
     clients: {
       title: "Our Clients",
       desc: "Clients and partners who validate our operational capacity"
+    },
+    howWeWork: {
+      title: "How We Work",
+      desc: "Terrain transformation through technical processes and operational excellence (Before and After)"
     },
     team: {
       title: "Team in Action",

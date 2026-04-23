@@ -21,6 +21,8 @@ interface HomeProps {
   DIFFERENTIAL_IMG_2: string;
   TEAM_IMAGES_ROW1: string[];
   TEAM_IMAGES_ROW2: string[];
+  HOW_WE_WORK_ROW1: string[];
+  HOW_WE_WORK_ROW2: string[];
   CLIENTS: { name: string; logo: string }[];
 }
 
@@ -33,6 +35,8 @@ export default function Home({
   DIFFERENTIAL_IMG_2,
   TEAM_IMAGES_ROW1,
   TEAM_IMAGES_ROW2,
+  HOW_WE_WORK_ROW1,
+  HOW_WE_WORK_ROW2,
   CLIENTS 
 }: HomeProps) {
   const { hash } = useLocation();
@@ -209,8 +213,57 @@ export default function Home({
         </div>
       </section>
 
+      {/* --- COMO TRABALHAMOS --- */}
+      <section id="trabalho" className="py-16 md:py-24 bg-brand-gray-light overflow-hidden">
+        <div className="container mx-auto px-4 md:px-12">
+          <ScrollReveal className="mb-12 md:mb-16 text-center">
+            <h2 className="text-3xl md:text-5xl mb-4 text-brand-black">{t.howWeWork.title}</h2>
+            <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">{t.howWeWork.desc}</p>
+          </ScrollReveal>
+
+          {/* Scrolling Work Photos */}
+          <div className="space-y-8">
+            {/* Row 1: Moving Right */}
+            <div className="relative">
+              <div className="flex animate-infinite-scroll w-fit">
+                {[...HOW_WE_WORK_ROW1, ...HOW_WE_WORK_ROW1].map((img, idx) => (
+                  <div key={`work-right-${idx}`} className="flex-shrink-0 w-60 md:w-96 px-3 md:px-4">
+                    <div className="bg-white rounded-sm overflow-hidden shadow-md border border-brand-gray-medium/30">
+                      <img 
+                        src={img} 
+                        alt={`Work Before/After ${idx}`} 
+                        className="w-full h-auto object-cover"
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Row 2: Moving Left */}
+            <div className="relative">
+              <div className="flex animate-infinite-scroll-reverse w-fit">
+                {[...HOW_WE_WORK_ROW2, ...HOW_WE_WORK_ROW2].map((img, idx) => (
+                  <div key={`work-left-${idx}`} className="flex-shrink-0 w-60 md:w-96 px-3 md:px-4">
+                    <div className="bg-white rounded-sm overflow-hidden shadow-md border border-brand-gray-medium/30">
+                      <img 
+                        src={img} 
+                        alt={`Work Before/After ${idx}`} 
+                        className="w-full h-auto object-cover"
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* --- EXPERIÊNCIA / AUTORIDADE --- */}
-      <section className="py-16 md:py-24 bg-brand-gray-light">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-12">
           <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
             <ScrollReveal>
@@ -372,7 +425,6 @@ export default function Home({
         </div>
       </section>
 
-      {/* --- TEAM --- */}
       <section id="equipe" className="py-16 md:py-24 bg-brand-gray-light">
         <div className="container mx-auto px-4 md:px-12">
           <ScrollReveal className="mb-12 md:mb-16">
