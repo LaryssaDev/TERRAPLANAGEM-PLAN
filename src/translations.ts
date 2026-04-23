@@ -43,19 +43,19 @@ export const translations = {
           {
             year: "2024",
             title: "Início e estruturação da operação",
-            text: "Início das atividades da Terraplanagem Plan, com foco em serviços de terraplanagem e atendimento a demandas locais. Neste período, a empresa estrutura sua base operacional, define as áreas estratégicas entre os sócios e estabelece um modelo de atuação com foco em organização, qualidade e eficiência.",
+            text: "Início das atividades da Terraplanagem PLAN, com foco em serviços de terraplanagem e atendimento a demandas locais. Neste período, a empresa estruturou sua base operacional, definiu suas áreas estratégicas e implementou um modelo de atuação com foco em organização, padronização de processos e eficiência operacional. Desde o início, adotou um direcionamento voltado à qualidade na execução, segurança e conformidade com normas técnicas, estabelecendo fundamentos sólidos para expansão.",
             img: "https://i.imgur.com/YnNIwp9.jpeg"
           },
           {
             year: "2025",
-            title: "Expansão regional e atuação em novos mercados",
-            text: "Ampliação da atuação para Timbó/SC e região, consolidando presença no Médio Vale do Itajaí. A empresa expande seu portfólio de serviços, passando a atender limpeza de áreas, manutenção e apoio operacional. Além disso, inicia atendimentos fora da região de origem, alcançando outros municípios e estados.",
+            title: "Expansão Regional e Ganho de Escala",
+            text: "Ampliação da atuação de Timbó/SC para regiões com consolidação no Médio Vale do Itajaí e início de atendimentos fora da região de origem. A empresa expandiu seu portfólio, passando a atender serviços como: limpeza de áreas, manutenção de terrenos, apoio operacional, serviços mecanizados, Gabiões e Muros de contenções. Neste ciclo, houve estruturação de equipes operacionais e evolução do modelo de execução, com foco em: ganho de produtividade, melhor aproveitamento de recursos e redução de exposição a riscos operacionais.",
             img: "https://i.imgur.com/XfRNTcu.jpeg"
           },
           {
             year: "2026",
-            title: "Consolidação e posicionamento estratégico",
-            text: "Fase de consolidação como empresa de soluções em terraplanagem e serviços operacionais. Atuação em projetos estruturados, contratos de maior porte e fortalecimento da gestão, com foco em padronização, produtividade e crescimento sustentável.",
+            title: "Consolidação e Posicionamento Técnico",
+            text: "Fase de consolidação como empresa de soluções em terraplanagem e serviços operacionais, com atuação em projetos estruturados e contratos de maior porte. A empresa fortalece seu posicionamento técnico com foco em: mecanização dos serviços, padronização operacional, eficiência produtiva e segurança nas operações. Atuação voltada para atendimento a demandas mais complexas, incluindo contratos contínuos, serviços sob demanda e projetos com maior nível de exigência técnica e operacional.",
             footer: "Evoluindo continuamente para atender demandas cada vez mais complexas com eficiência, segurança e qualidade.",
             img: "https://i.imgur.com/ylFs2SK.png"
           }
@@ -93,9 +93,14 @@ export const translations = {
       ],
       footer: "Cada um na sua função, todos com o mesmo objetivo: entregar excelência e crescer com consistência."
     },
+    governance: {
+      title: "Governança",
+      subtitle: "Gestão estratégica para garantir qualidade e conformidade em todas as etapas operacional",
+      desc: "Nossa governança é baseada na integração entre planejamento, execução e controle, assegurando que cada projeto seja conduzido com o máximo de eficiência e transparência."
+    },
     authority: {
       title: "Experiência que gera confiança",
-      desc: "Atuamos em projetos relevantes, garantindo soluções que atendem aos mais altos padrões de exigência do mercado de energia e infraestrutura.",
+      desc: "Atendimento a concessionárias de energia, indústria e obras de infraestrutura",
       partners: "Entre outros parceiros de sucesso"
     },
     services: {
@@ -210,19 +215,19 @@ export const translations = {
           {
             year: "2024",
             title: "Start and operation structuring",
-            text: "Start of Terraplanagem Plan activities, focusing on earthmoving services and meeting local demands. During this period, the company structures its operational base, defines strategic areas among partners, and establishes an action model focused on organization, quality, and efficiency.",
+            text: "Start of Terraplanagem PLAN activities, focusing on earthmoving services and meeting local demands. During this period, the company structured its operational base, defined its strategic areas, and implemented an action model focused on organization, standardization of processes, and operational efficiency. From the beginning, it adopted a direction focused on execution quality, safety, and compliance with technical standards, establishing solid foundations for expansion.",
             img: "https://i.imgur.com/YnNIwp9.jpeg"
           },
           {
             year: "2025",
-            title: "Regional expansion and operation in new markets",
-            text: "Expansion of activities to Timbó/SC and the region, consolidating presence in the Médio Vale do Itajaí. The company expands its service portfolio, starting to meet demands for area cleaning, maintenance, and operational support. In addition, it starts serving outside its region of origin, reaching other municipalities and states.",
+            title: "Regional Expansion and Scale Gain",
+            text: "Expansion of activities from Timbó/SC to broader regions with consolidation in the Médio Vale do Itajaí and the start of operations outside the region of origin. The company expanded its portfolio, providing services such as: site clearing, terrain maintenance, operational support, mechanized services, Gabions, and Retaining Walls. In this cycle, there was a structuring of operational teams and evolution of the execution model, focusing on: productivity gains, better resource utilization, and reduction of exposure to operational risks.",
             img: "https://i.imgur.com/XfRNTcu.jpeg"
           },
           {
             year: "2026",
-            title: "Consolidation and strategic positioning",
-            text: "Consolidation phase as an earthmoving and operational services solutions company. Acting in structured projects, larger contracts, and strengthening management, with a focus on standardization, productivity, and sustainable growth.",
+            title: "Consolidation and Technical Positioning",
+            text: "Consolidation phase as an earthmoving and operational services solutions company, acting in structured projects and larger contracts. The company strengthens its technical positioning with a focus on: service mechanization, operational standardization, productive efficiency, and safety in operations. Activities aimed at meeting more complex demands, including ongoing contracts, services on demand, and projects with a higher level of technical and operational requirement.",
             footer: "Continuously evolving to meet increasingly complex demands with efficiency, safety, and quality.",
             img: "https://i.imgur.com/ylFs2SK.png"
           }
@@ -260,9 +265,14 @@ export const translations = {
       ],
       footer: "Each in their role, all with the same goal: to deliver excellence and grow with consistency."
     },
+    governance: {
+      title: "Governance",
+      subtitle: "Strategic management to ensure quality and compliance in all operational stages",
+      desc: "Our governance is based on the integration of planning, execution, and control, ensuring that each project is conducted with maximum efficiency and transparency."
+    },
     authority: {
       title: "Experience that builds trust",
-      desc: "We operate in relevant projects, ensuring solutions that meet the highest standards of the energy and infrastructure market.",
+      desc: "Service to energy utilities, industry, and infrastructure works",
       partners: "Among other successful partners"
     },
     services: {

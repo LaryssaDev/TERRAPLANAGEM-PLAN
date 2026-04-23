@@ -16,6 +16,7 @@ interface HomeProps {
   t: any;
   HERO_SMALL_IMG: string;
   STRUCTURE_IMG: string;
+  GOVERNANCE_IMG: string;
   DIFFERENTIAL_IMG: string;
   DIFFERENTIAL_IMG_2: string;
   TEAM_IMAGES_ROW1: string[];
@@ -27,6 +28,7 @@ export default function Home({
   t, 
   HERO_SMALL_IMG, 
   STRUCTURE_IMG, 
+  GOVERNANCE_IMG,
   DIFFERENTIAL_IMG, 
   DIFFERENTIAL_IMG_2,
   TEAM_IMAGES_ROW1,
@@ -182,6 +184,28 @@ export default function Home({
               </ScrollReveal>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* --- GOVERNANÇA --- */}
+      <section id="governanca" className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-12">
+          <ScrollReveal className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-5xl mb-4 text-brand-black">{t.governance.title}</h2>
+            <p className="text-brand-yellow font-bold tracking-[0.3em] uppercase text-xs md:text-sm mb-6">{t.governance.subtitle}</p>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">{t.governance.desc}</p>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.2} className="flex justify-center">
+            <div className="relative w-full max-w-5xl shadow-2xl rounded-sm overflow-hidden border border-brand-gray-medium">
+              <img 
+                src={GOVERNANCE_IMG} 
+                alt="Mapa Mental de Governança" 
+                className="w-full h-auto"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

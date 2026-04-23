@@ -20,6 +20,7 @@ import ScrollToTop from './components/ScrollToTop';
 const LOGO_URL = "https://i.imgur.com/GwSYj0Y.png";
 const HERO_SMALL_IMG = "https://i.imgur.com/ylFs2SK.png";
 const STRUCTURE_IMG = "https://i.imgur.com/XfRNTcu.jpeg";
+const GOVERNANCE_IMG = "https://i.imgur.com/l1t8Piv.png";
 const DIFFERENTIAL_IMG = "https://i.imgur.com/YnNIwp9.jpeg";
 const DIFFERENTIAL_IMG_2 = "https://i.imgur.com/psy7xua.jpeg";
 
@@ -83,7 +84,7 @@ const Navbar = ({ lang, setLang, t }: { lang: 'pt' | 'en', setLang: (l: 'pt' | '
           submenuItems: [
             { name: t.nav.company, to: '/#sobre', type: 'anchor' },
             { name: t.nav.society, to: '/#estrutura', type: 'anchor' },
-            { name: t.nav.governance, to: '/#contato', type: 'anchor' },
+            { name: t.nav.governance, to: '/#governanca', type: 'anchor' },
           ]
         },
         { name: t.nav.mvv, to: '/institucional', type: 'route' },
@@ -328,6 +329,7 @@ export default function App() {
               t={t} 
               HERO_SMALL_IMG={HERO_SMALL_IMG}
               STRUCTURE_IMG={STRUCTURE_IMG}
+              GOVERNANCE_IMG={GOVERNANCE_IMG}
               DIFFERENTIAL_IMG={DIFFERENTIAL_IMG}
               DIFFERENTIAL_IMG_2={DIFFERENTIAL_IMG_2}
               TEAM_IMAGES_ROW1={TEAM_IMAGES_ROW1}
