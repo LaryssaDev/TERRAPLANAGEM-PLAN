@@ -274,12 +274,11 @@ export default function Home({
             </ScrollReveal>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="flex justify-center">
             {[
-              { name: "Neoenergia", logo: "https://i.imgur.com/8r9N9am.png", color: "#00a341" },
-              { name: "Eletrosul", logo: "https://i.imgur.com/lozRXOs.jpeg", color: "#005a9c" }
+              { name: "Neoenergia", logo: "https://i.imgur.com/8r9N9am.png", color: "#00a341" }
             ].map((brand, idx) => (
-              <ScrollReveal key={brand.name} delay={idx * 0.2} className="bg-white p-12 flex flex-col items-center justify-center shadow-sm hover:shadow-xl transition-all border-b-4 border-transparent hover:border-brand-yellow group">
+              <ScrollReveal key={brand.name} delay={idx * 0.2} className="bg-white p-12 flex flex-col items-center justify-center shadow-sm hover:shadow-xl transition-all border-b-4 border-transparent hover:border-brand-yellow group max-w-lg w-full">
                 <img 
                   src={brand.logo} 
                   alt={brand.name} 
@@ -304,12 +303,24 @@ export default function Home({
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {t.services.items.map((service: any, idx: number) => (
-              <ScrollReveal key={idx} delay={idx * 0.05} className="group bg-brand-gray-light p-6 md:p-8 border border-brand-gray-medium hover:bg-brand-yellow hover:border-brand-yellow transition-all duration-500">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-2 h-8 bg-brand-black"></div>
-                  <h3 className="text-xl text-brand-black group-hover:text-brand-black transition-colors">{service.title}</h3>
+              <ScrollReveal key={idx} delay={idx * 0.05} className="group bg-brand-gray-light border border-brand-gray-medium hover:bg-brand-yellow hover:border-brand-yellow transition-all duration-500 overflow-hidden flex flex-col">
+                {service.image && (
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
+                )}
+                <div className="p-6 md:p-8 flex-grow">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-2 h-8 bg-brand-black"></div>
+                    <h3 className="text-xl text-brand-black group-hover:text-brand-black transition-colors">{service.title}</h3>
+                  </div>
+                  <p className="text-gray-600 group-hover:text-brand-black/70 transition-colors text-sm leading-relaxed">{service.desc}</p>
                 </div>
-                <p className="text-gray-600 group-hover:text-brand-black/70 transition-colors text-sm leading-relaxed">{service.desc}</p>
               </ScrollReveal>
             ))}
           </div>
