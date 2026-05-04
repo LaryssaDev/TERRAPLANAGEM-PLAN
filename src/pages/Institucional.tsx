@@ -81,24 +81,24 @@ const Timeline = ({ t }: { t: any }) => {
       </ScrollReveal>
 
       {/* Timeline Desktop */}
-      <div className="relative pt-20 pb-12 hidden lg:block">
+      <div className="relative pt-32 pb-12 hidden lg:block">
         {/* Main Line */}
-        <div className="absolute top-[108px] left-0 w-full h-1 bg-white/20"></div>
+        <div className="absolute top-[124px] left-0 w-full h-1 bg-white/20"></div>
         
         <div className="grid grid-cols-3 gap-8 px-4">
           {t.mvv.trajectory.items.map((item: any, idx: number) => (
             <ScrollReveal key={idx} delay={idx * 0.2}>
               <div className="relative">
                 {/* Year and Marker */}
-                <div className="absolute -top-16 left-1/2 -translate-x-1/2 flex flex-col items-center">
+                <div className="absolute -top-20 left-1/2 -translate-x-1/2 flex flex-col items-center">
                   <span className="text-2xl font-black text-brand-yellow mb-2">{item.year}</span>
                   <div className="w-6 h-6 rounded-full bg-brand-black border-4 border-brand-yellow z-10 box-content"></div>
                   {/* Subtle Pointer up to marker from card */}
-                  <div className="h-8 w-px bg-brand-yellow/30 mt-2"></div>
+                  <div className="h-48 w-px bg-brand-yellow/30 mt-2"></div>
                 </div>
-
+ 
                 {/* Card */}
-                <div className="mt-12 bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-sm shadow-xl transition-all hover:border-brand-yellow/50 group">
+                <div className="mt-64 bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-sm shadow-xl transition-all hover:border-brand-yellow/50 group">
                   <div className="p-2">
                     <h3 className="text-brand-yellow font-black text-lg uppercase tracking-tight mb-4 leading-tight">
                       {item.title}
