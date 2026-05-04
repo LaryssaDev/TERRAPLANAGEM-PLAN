@@ -118,8 +118,8 @@ export const translations = {
         { title: "Drenagem e Tubulações", desc: "Instalação de sistemas de drenagem e tubulações para controle eficiente do escoamento de águas pluviais, prevenindo alagamentos e preservando a integridade das estruturas.", image: "https://i.imgur.com/VnSd7RK.jpeg" },
         { title: "Demolições e Limpeza", desc: "Execução de demolições controladas e limpeza técnica de áreas, com remoção de estruturas e resíduos, preparando o terreno para novas etapas construtivas com segurança e eficiência.", image: "https://i.imgur.com/nhJ7Obn.jpeg" },
         { title: "Manutenção de Tubulões", desc: "Serviços especializados em manutenção e adequação de tubulões e fundações profundas, garantindo estabilidade estrutural e conformidade com padrões técnicos exigidos." },
-        { title: "Roçadas manual e mecanizada", desc: "Execução de roçadas em áreas extensas, faixas de servidão e terrenos técnicos, utilizando métodos manuais e mecanizados para garantir limpeza, segurança e conservação das áreas." },
-        { title: "Supressão Vegetal", desc: "Remoção controlada de vegetação para implantação de empreendimentos, infraestrutura ou linhas de transmissão, com foco em eficiência operacional e conformidade com as exigências ambientais." }
+        { title: "Roçadas manual e mecanizada", desc: "Execução de roçadas em áreas extensas, faixas de servidão e terrenos técnicos, utilizando métodos manuais e mecanizados para garantir limpeza, segurança e conservação das áreas.", image: "https://i.imgur.com/v8fYUHq.jpeg" },
+        { title: "Supressão Vegetal", desc: "Remoção controlada de vegetação para implantação de empreendimentos, infraestrutura ou linhas de transmissão, com foco em eficiência operacional e conformidade com as exigências ambientais.", image: "https://i.imgur.com/4lUl07f.jpeg" }
       ],
       footer: "Operamos com foco em produtividade, segurança e conformidade ambiental, entregando soluções eficientes para cada tipo de terreno e operação",
       cta: "Solicitar avaliação técnica"
@@ -296,8 +296,8 @@ export const translations = {
         { title: "Drainage and Piping", desc: "Installation of drainage systems and piping for efficient control of rainwater runoff, preventing flooding and preserving structural integrity.", image: "https://i.imgur.com/VnSd7RK.jpeg" },
         { title: "Demolition and Cleaning", desc: "Execution of controlled demolitions and technical area cleaning, with removal of structures and waste, preparing the ground for new construction stages with safety and efficiency.", image: "https://i.imgur.com/nhJ7Obn.jpeg" },
         { title: "Caisson Maintenance", desc: "Specialized services in maintenance and adaptation of caissons and deep foundations, ensuring structural stability and compliance with required technical standards." },
-        { title: "Manual and mechanized mowing", desc: "Execution of mowing in large areas, right-of-way strips, and technical grounds, using manual and mechanized methods to ensure cleanliness, safety, and conservation of the areas." },
-        { title: "Vegetation Suppression", desc: "Controlled removal of vegetation for the implementation of developments, infrastructure, or transmission lines, focusing on operational efficiency and compliance with environmental requirements." }
+        { title: "Manual and mechanized mowing", desc: "Execution of mowing in large areas, right-of-way strips, and technical grounds, using manual and mechanized methods to ensure cleanliness, safety, and conservation of the areas.", image: "https://i.imgur.com/v8fYUHq.jpeg" },
+        { title: "Vegetation Suppression", desc: "Controlled removal of vegetation for the implementation of developments, infrastructure, or transmission lines, focusing on operational efficiency and compliance with environmental requirements.", image: "https://i.imgur.com/4lUl07f.jpeg" }
       ],
       footer: "We operate with a focus on productivity, safety, and environmental compliance, delivering efficient solutions for every type of terrain and operation",
       cta: "Request technical evaluation"
