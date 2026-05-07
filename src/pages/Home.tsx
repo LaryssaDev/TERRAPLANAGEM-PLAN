@@ -83,7 +83,7 @@ export default function Home({
                   href="https://wa.me/5547999911880" 
                   target="_blank" 
                   rel="noreferrer"
-                  className="bg-brand-yellow text-white font-bold px-8 py-4 flex items-center justify-center gap-2 hover:bg-brand-black hover:text-white transition-all group"
+                  className="bg-[#25D366] text-white font-bold px-8 py-4 flex items-center justify-center gap-2 hover:bg-brand-black hover:text-white transition-all group"
                 >
                   {t.hero.whatsapp} <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </a>
