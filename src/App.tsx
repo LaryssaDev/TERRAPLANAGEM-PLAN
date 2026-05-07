@@ -14,6 +14,7 @@ import {
 import { translations } from './translations';
 import Home from './pages/Home';
 import Institucional from './pages/Institucional';
+import Governanca from './pages/Governanca';
 import ScrollToTop from './components/ScrollToTop';
 
 // --- Constants ---
@@ -46,7 +47,6 @@ const TEAM_IMAGES_ROW2 = [
 
 const CLIENTS = [
   { name: "Neoenergia", logo: "https://i.imgur.com/8r9N9am.png" },
-  { name: "Eletrosul", logo: "https://i.imgur.com/lozRXOs.jpeg" },
   { name: "Unifique", logo: "https://i.imgur.com/6rm2TYe.png" },
   { name: "Frigorífico Gessner", logo: "https://i.imgur.com/Tqaa9I7.png" },
   { name: "Cooper Timbó", logo: "https://i.imgur.com/X0b458C.png" },
@@ -110,7 +110,7 @@ const Navbar = ({ lang, setLang, t }: { lang: 'pt' | 'en', setLang: (l: 'pt' | '
           submenuItems: [
             { name: t.nav.company, to: '/#sobre', type: 'anchor' },
             { name: t.nav.society, to: '/#estrutura', type: 'anchor' },
-            { name: t.nav.governance, to: '/#governanca', type: 'anchor' },
+            { name: t.nav.governance, to: '/governanca', type: 'route' },
           ]
         },
         { name: t.nav.mvv, to: '/institucional', type: 'route' },
@@ -368,6 +368,7 @@ export default function App() {
             />
           } />
           <Route path="/institucional" element={<Institucional t={t} />} />
+          <Route path="/governanca" element={<Governanca t={t} GOVERNANCE_IMG={GOVERNANCE_IMG} />} />
         </Routes>
 
         <footer className="bg-brand-black text-white py-16 border-t border-brand-yellow/30">
