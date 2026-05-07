@@ -91,6 +91,7 @@ const Navbar = ({ lang, setLang, t }: { lang: 'pt' | 'en', setLang: (l: 'pt' | '
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+  const [activeSubSubmenu, setActiveSubSubmenu] = useState<string | null>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -110,7 +111,17 @@ const Navbar = ({ lang, setLang, t }: { lang: 'pt' | 'en', setLang: (l: 'pt' | '
           submenuItems: [
             { name: t.nav.company, to: '/#sobre', type: 'anchor' },
             { name: t.nav.society, to: '/#estrutura', type: 'anchor' },
-            { name: t.nav.governance, to: '/governanca', type: 'route' },
+            { 
+              name: t.nav.governance, 
+              hasSubSubmenu: true,
+              to: '/governanca', 
+              type: 'route',
+              subSubmenuItems: [
+                { name: t.nav.ethics, to: '/governanca#conduta', type: 'anchor' },
+                { name: t.nav.compliance, to: '/governanca#denuncia', type: 'anchor' },
+                { name: t.nav.antiCorruption, to: '/governanca#corrupcao', type: 'anchor' },
+              ]
+            },
           ]
         },
         { name: t.nav.mvv, to: '/institucional', type: 'route' },
@@ -124,15 +135,20 @@ const Navbar = ({ lang, setLang, t }: { lang: 'pt' | 'en', setLang: (l: 'pt' | '
     setIsMobileMenuOpen(false);
     setActiveDropdown(null);
     setActiveSubmenu(null);
+    setActiveSubSubmenu(null);
     if (link.type === 'anchor') {
-        const path = link.to.split('#')[0];
-        const id = link.to.split('#')[1];
+        const parts = link.to.split('#');
+        const path = parts[0] || '/';
+        const id = parts[1];
         
-        if (location.pathname === '/' || location.pathname === path || (location.pathname === '' && path === '/')) {
+        if (location.pathname === path || (location.pathname === '/' && path === '') || (location.pathname === '' && path === '/')) {
           const element = document.getElementById(id);
           if (element) {
               element.scrollIntoView({ behavior: 'smooth' });
           }
+        } else {
+          // If we are on another page, the Hash will work naturally or we might need a timeout
+          // But standard behavior is usually ok with Link if it's on a different route
         }
     }
   };
@@ -175,6 +191,7 @@ const Navbar = ({ lang, setLang, t }: { lang: 'pt' | 'en', setLang: (l: 'pt' | '
                 onMouseLeave={() => {
                   setActiveDropdown(null);
                   setActiveSubmenu(null);
+                  setActiveSubSubmenu(null);
                 }}
               >
                 {link.hasDropdown ? (
@@ -223,24 +240,60 @@ const Navbar = ({ lang, setLang, t }: { lang: 'pt' | 'en', setLang: (l: 'pt' | '
                             </Link>
                           )}
 
-                          {/* Submenu Desktop (Opens to the right) */}
+                          {/* Submenu Level 2 Desktop */}
                           <AnimatePresence>
                             {item.hasSubmenu && activeSubmenu === item.name && (
                               <motion.div
                                 initial={{ opacity: 0, x: -10 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: -10 }}
-                                className="absolute top-0 left-full bg-white shadow-xl py-0 min-w-[200px] border-l-4 border-brand-black z-50"
+                                className="absolute top-0 left-full bg-white shadow-xl py-0 min-w-[240px] border-l-4 border-brand-black z-50"
                               >
                                 {item.submenuItems?.map((sub: any) => (
-                                  <Link
+                                  <div 
                                     key={sub.name}
-                                    to={sub.to}
-                                    onClick={() => handleLinkClick(sub)}
-                                    className="block px-6 py-4 text-[10px] font-bold text-brand-black hover:bg-brand-yellow/20 border-b border-gray-100 last:border-0 transition-colors uppercase tracking-widest whitespace-nowrap"
+                                    className="relative group"
+                                    onMouseEnter={() => sub.hasSubSubmenu && setActiveSubSubmenu(sub.name)}
+                                    onMouseLeave={() => sub.hasSubSubmenu && setActiveSubSubmenu(null)}
                                   >
-                                    {sub.name}
-                                  </Link>
+                                    {sub.hasSubSubmenu ? (
+                                      <div className={`flex justify-between items-center px-6 py-4 text-[10px] font-bold text-brand-black hover:bg-brand-yellow/20 cursor-pointer border-b border-gray-100 last:border-0 transition-colors uppercase tracking-widest whitespace-nowrap`}>
+                                        <Link to={sub.to} onClick={() => handleLinkClick(sub)} className="flex-1">{sub.name}</Link>
+                                        <ChevronRight size={12} />
+                                      </div>
+                                    ) : (
+                                      <Link
+                                        to={sub.to}
+                                        onClick={() => handleLinkClick(sub)}
+                                        className="block px-6 py-4 text-[10px] font-bold text-brand-black hover:bg-brand-yellow/20 border-b border-gray-100 last:border-0 transition-colors uppercase tracking-widest whitespace-nowrap"
+                                      >
+                                        {sub.name}
+                                      </Link>
+                                    )}
+
+                                    {/* Level 3 Desktop */}
+                                    <AnimatePresence>
+                                      {sub.hasSubSubmenu && activeSubSubmenu === sub.name && (
+                                        <motion.div
+                                          initial={{ opacity: 0, x: -10 }}
+                                          animate={{ opacity: 1, x: 0 }}
+                                          exit={{ opacity: 0, x: -10 }}
+                                          className="absolute top-0 left-full bg-white shadow-xl py-0 min-w-[220px] border-l-4 border-brand-black z-50"
+                                        >
+                                          {sub.subSubmenuItems?.map((ss: any) => (
+                                            <Link
+                                              key={ss.name}
+                                              to={ss.to}
+                                              onClick={() => handleLinkClick(ss)}
+                                              className="block px-6 py-4 text-[9px] font-bold text-brand-black hover:bg-brand-yellow/20 border-b border-gray-100 last:border-0 transition-colors uppercase tracking-widest whitespace-nowrap"
+                                            >
+                                              {ss.name}
+                                            </Link>
+                                          ))}
+                                        </motion.div>
+                                      )}
+                                    </AnimatePresence>
+                                  </div>
                                 ))}
                               </motion.div>
                             )}
@@ -291,14 +344,40 @@ const Navbar = ({ lang, setLang, t }: { lang: 'pt' | 'en', setLang: (l: 'pt' | '
                               <div className="text-brand-black font-bold text-lg uppercase tracking-tight opacity-40">{item.name}</div>
                               <div className="flex flex-col gap-3 pl-4 border-l-2 border-brand-black/20 my-2">
                                 {item.submenuItems?.map((sub: any) => (
-                                  <Link 
-                                    key={sub.name} 
-                                    to={sub.to} 
-                                    onClick={() => handleLinkClick(sub)}
-                                    className="text-brand-black font-bold text-base uppercase tracking-tighter"
-                                  >
-                                    {sub.name}
-                                  </Link>
+                                  <div key={sub.name} className="flex flex-col gap-2">
+                                    {sub.hasSubSubmenu ? (
+                                      <>
+                                        <Link 
+                                          to={sub.to} 
+                                          onClick={() => handleLinkClick(sub)}
+                                          className="text-brand-black font-bold text-base uppercase tracking-tighter"
+                                        >
+                                          {sub.name}
+                                        </Link>
+                                        <div className="flex flex-col gap-2 pl-4 border-l border-brand-black/10 my-1">
+                                          {sub.subSubmenuItems?.map((ss: any) => (
+                                            <Link 
+                                              key={ss.name} 
+                                              to={ss.to} 
+                                              onClick={() => handleLinkClick(ss)}
+                                              className="text-brand-black font-medium text-sm uppercase tracking-tighter"
+                                            >
+                                              {ss.name}
+                                            </Link>
+                                          ))}
+                                        </div>
+                                      </>
+                                    ) : (
+                                      <Link 
+                                        key={sub.name} 
+                                        to={sub.to} 
+                                        onClick={() => handleLinkClick(sub)}
+                                        className="text-brand-black font-bold text-base uppercase tracking-tighter"
+                                      >
+                                        {sub.name}
+                                      </Link>
+                                    )}
+                                  </div>
                                 ))}
                               </div>
                             </div>
