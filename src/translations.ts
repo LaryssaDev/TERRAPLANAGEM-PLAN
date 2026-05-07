@@ -97,7 +97,115 @@ export const translations = {
     governance: {
       title: "Governança",
       subtitle: "Gestão estratégica para garantir qualidade e conformidade em todas as etapas operacional",
-      desc: "Nossa governança é baseada na integração entre planejamento, execução e controle, assegurando que cada projeto seja conduzido com o máximo de eficiência e transparência."
+      desc: "Nossa governança é baseada na integração entre planejamento, execução e controle, assegurando que cada projeto seja conduzido com o máximo de eficiência e transparência.",
+      ethics: {
+        title: "Código de Conduta",
+        text: "Na Direx Consultoria e Serviços – Terraplanagem Plan, o Código de Conduta estabelece as diretrizes que orientam o comportamento de todos que atuam em nome da empresa, garantindo integridade, segurança e relações profissionais baseadas no respeito.",
+        principles: {
+          title: "Princípios Fundamentais",
+          items: [
+            "Ética — agir corretamente mesmo sem supervisão",
+            "Transparência — clareza nas informações",
+            "Responsabilidade — assumir decisões",
+            "Segurança — preservar a vida",
+            "Respeito — tratar todos com dignidade"
+          ]
+        },
+        rules: {
+          title: "Regras de Conduta",
+          items: [
+            "Ambiente profissional e respeitoso",
+            "Uso obrigatório de EPIs",
+            "Cumprimento das normas de segurança (NRs)",
+            "Operação de máquinas apenas com autorização",
+            "Transparência com clientes",
+            "Critérios técnicos com fornecedores"
+          ]
+        },
+        forbidden: {
+          title: "Condutas Proibidas",
+          items: [
+            "Fraudes ou falsificação de informações",
+            "Corrupção ou propina",
+            "Uso indevido de recursos",
+            "Trabalhar sem segurança",
+            "Discriminação ou desrespeito"
+          ]
+        },
+        quote: "“Na Direx, ética não é opção — é a base de tudo o que fazemos.”"
+      },
+      compliance: {
+        title: "Canal de Denúncias",
+        text: "A Direx disponibiliza um canal seguro e confidencial para o reporte de irregularidades, garantindo um ambiente ético, transparente e responsável.",
+        purpose: {
+          title: "Finalidade",
+          items: [
+            "Prevenir irregularidades",
+            "Fortalecer a ética",
+            "Proteger colaboradores e parceiros",
+            "Garantir conformidade legal"
+          ]
+        },
+        reportable: {
+          title: "O que pode ser reportado",
+          items: [
+            "Fraudes ou irregularidades",
+            "Corrupção ou suborno",
+            "Assédio ou discriminação",
+            "Falhas de segurança",
+            "Uso inadequado de equipamentos",
+            "Violação de normas"
+          ]
+        },
+        guarantees: {
+          title: "Garantias",
+          items: [
+            "Sigilo absoluto",
+            "Não retaliação",
+            "Análise imparcial",
+            "Possibilidade de denúncia anônima"
+          ]
+        },
+        contact: {
+          title: "Contato",
+          email: "E-mail: etica@terraplanagemplan.com",
+          whatsapp: "WhatsApp: (47) 99991-1880"
+        }
+      },
+      antiCorruption: {
+        title: "Combate à Corrupção",
+        text: "A Direx adota uma política de tolerância zero contra corrupção, fraude ou qualquer conduta antiética.",
+        prohibited: {
+          title: "É proibido",
+          items: [
+            "Oferecer ou aceitar propina",
+            "Manipular medições ou contratos",
+            "Fraudar documentos"
+          ]
+        },
+        commitments: {
+          title: "Compromissos",
+          items: [
+            "Atuar com integridade",
+            "Garantir transparência",
+            "Cumprir normas legais",
+            "Monitorar fornecedores"
+          ]
+        },
+        penalties: {
+          title: "Penalidades",
+          items: [
+            "Advertência",
+            "Suspensão",
+            "Desligamento",
+            "Encerramento de contratos"
+          ]
+        }
+      },
+      orgStructure: {
+        title: "Estrutura Organizacional",
+        text: "A Direx possui uma estrutura organizacional bem definida, garantindo eficiência operacional, gestão estratégica e qualidade na execução dos serviços."
+      }
     },
     authority: {
       title: "Experiência que gera confiança",
@@ -275,7 +383,115 @@ export const translations = {
     governance: {
       title: "Governance",
       subtitle: "Strategic management to ensure quality and compliance in all operational stages",
-      desc: "Our governance is based on the integration of planning, execution, and control, ensuring that each project is conducted with maximum efficiency and transparency."
+      desc: "Our governance is based on the integration of planning, execution, and control, ensuring that each project is conducted with maximum efficiency and transparency.",
+      ethics: {
+        title: "Code of Conduct",
+        text: "At Direx Consultoria e Serviços – Terraplanagem Plan, the Code of Conduct establishes the guidelines that guide the behavior of everyone who acts on behalf of the company, ensuring integrity, safety, and professional relationships based on respect.",
+        principles: {
+          title: "Fundamental Principles",
+          items: [
+            "Ethics — act correctly even without supervision",
+            "Transparency — clarity in information",
+            "Responsibility — take decisions",
+            "Safety — preserve life",
+            "Respect — treat everyone with dignity"
+          ]
+        },
+        rules: {
+          title: "Rules of Conduct",
+          items: [
+            "Professional and respectful environment",
+            "Mandatory use of PPE",
+            "Compliance with safety standards (NRs)",
+            "Machine operation only with authorization",
+            "Transparency with customers",
+            "Technical criteria with suppliers"
+          ]
+        },
+        forbidden: {
+          title: "Prohibited Conduct",
+          items: [
+            "Fraud or falsification of information",
+            "Corruption or bribery",
+            "Improper use of resources",
+            "Working without safety",
+            "Discrimination or disrespect"
+          ]
+        },
+        quote: "“At Direx, ethics is not an option — it is the basis of everything we do.”"
+      },
+      compliance: {
+        title: "Whistleblowing Channel",
+        text: "Direx provides a safe and confidential channel for reporting irregularities, ensuring an ethical, transparent, and responsible environment.",
+        purpose: {
+          title: "Purpose",
+          items: [
+            "Prevent irregularities",
+            "Strengthen ethics",
+            "Protect employees and partners",
+            "Ensure legal compliance"
+          ]
+        },
+        reportable: {
+          title: "What can be reported",
+          items: [
+            "Fraud or irregularities",
+            "Corruption or bribery",
+            "Harassment or discrimination",
+            "Safety failures",
+            "Inadequate use of equipment",
+            "Violation of standards"
+          ]
+        },
+        guarantees: {
+          title: "Guarantees",
+          items: [
+            "Absolute secrecy",
+            "Non-retaliation",
+            "Impartial analysis",
+            "Possibility of anonymous reporting"
+          ]
+        },
+        contact: {
+          title: "Contact",
+          email: "Email: etica@terraplanagemplan.com",
+          whatsapp: "WhatsApp: (47) 99991-1880"
+        }
+      },
+      antiCorruption: {
+        title: "Anti-Corruption",
+        text: "Direx adopts a zero-tolerance policy against corruption, fraud, or any unethical conduct.",
+        prohibited: {
+          title: "It is prohibited",
+          items: [
+            "Offer or accept bribes",
+            "Manipulate measurements or contracts",
+            "Defraud documents"
+          ]
+        },
+        commitments: {
+          title: "Commitments",
+          items: [
+            "Act with integrity",
+            "Ensure transparency",
+            "Comply with legal standards",
+            "Monitor suppliers"
+          ]
+        },
+        penalties: {
+          title: "Penalties",
+          items: [
+            "Warning",
+            "Suspension",
+            "Termination",
+            "Termination of contracts"
+          ]
+        }
+      },
+      orgStructure: {
+        title: "Organizational Structure",
+        text: "Direx has a well-defined organizational structure, ensuring operational efficiency, strategic management, and quality in the execution of services."
+      }
     },
     authority: {
       title: "Experience that builds trust",
