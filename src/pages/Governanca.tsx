@@ -38,7 +38,7 @@ export default function Governanca({ t, GOVERNANCE_IMG }: { t: any, GOVERNANCE_I
       </section>
 
       {/* --- CÓDIGO DE CONDUTA --- */}
-      <section id="conduta" className="py-24 bg-white">
+      <section id="conduta" className="py-24 bg-white overflow-x-hidden">
         <div className="container mx-auto px-4 md:px-12">
           <ScrollReveal className="text-center mb-16">
             <ShieldCheck className="w-12 h-12 text-brand-yellow mx-auto mb-6" />
@@ -99,7 +99,7 @@ export default function Governanca({ t, GOVERNANCE_IMG }: { t: any, GOVERNANCE_I
       </section>
 
       {/* --- CANAL DE DENÚNCIA --- */}
-      <section id="denuncia" className="py-24 bg-brand-gray-light">
+      <section id="denuncia" className="py-24 bg-brand-gray-light overflow-x-hidden">
         <div className="container mx-auto px-4 md:px-12">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
@@ -179,7 +179,7 @@ export default function Governanca({ t, GOVERNANCE_IMG }: { t: any, GOVERNANCE_I
       </section>
 
       {/* --- COMBATE À CORRUPÇÃO --- */}
-      <section id="corrupcao" className="py-24 bg-white">
+      <section id="corrupcao" className="py-24 bg-white overflow-x-hidden">
         <div className="container mx-auto px-4 md:px-12">
           <ScrollReveal className="text-center mb-16">
             <AlertTriangle className="w-12 h-12 text-brand-yellow mx-auto mb-6" />

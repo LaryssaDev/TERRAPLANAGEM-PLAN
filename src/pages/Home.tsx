@@ -110,7 +110,7 @@ export default function Home({
       </section>
 
       {/* --- SOBRE A EMPRESA --- */}
-      <section id="sobre" className="py-16 md:py-24 bg-white">
+      <section id="sobre" className="py-16 md:py-24 bg-white overflow-x-hidden">
         <div className="container mx-auto px-4 md:px-12">
           <div className="grid md:grid-cols-12 gap-12 items-center">
             <div className="md:col-span-5">
@@ -241,7 +241,7 @@ export default function Home({
       </section>
 
       {/* --- EXPERIÊNCIA / AUTORIDADE --- */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-white overflow-x-hidden">
         <div className="container mx-auto px-4 md:px-12">
           <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
             <ScrollReveal>
@@ -271,7 +271,7 @@ export default function Home({
       </section>
 
       {/* --- SERVIÇOS --- */}
-      <section id="servicos" className="py-16 md:py-24 bg-white">
+      <section id="servicos" className="py-16 md:py-24 bg-white overflow-x-hidden">
         <div className="container mx-auto px-4 md:px-12">
           <ScrollReveal className="mb-12 md:mb-16">
             <p className="text-brand-black/70 font-bold tracking-[0.3em] text-sm mb-4 block">{t.services.tag}</p>
@@ -321,7 +321,7 @@ export default function Home({
       </section>
 
       {/* --- DIFERENCIAL --- */}
-      <section className="py-16 md:py-24 bg-brand-yellow text-brand-black relative">
+      <section className="py-16 md:py-24 bg-brand-yellow text-brand-black relative overflow-x-hidden">
         <div className="container mx-auto px-4 md:px-12 grid md:grid-cols-2 gap-16 items-center">
           <ScrollReveal>
             <h2 className="text-3xl md:text-5xl mb-8 text-brand-black">{t.differentials.title}</h2>
@@ -463,7 +463,7 @@ export default function Home({
       </section>
 
       {/* --- CONTATO --- */}
-      <section id="contato" className="py-16 md:py-24 bg-brand-gray-light">
+      <section id="contato" className="py-16 md:py-24 bg-brand-gray-light overflow-x-hidden">
         <div className="container mx-auto px-4 md:px-12">
           <div className="grid lg:grid-cols-2 gap-12 md:gap-16">
             <ScrollReveal>

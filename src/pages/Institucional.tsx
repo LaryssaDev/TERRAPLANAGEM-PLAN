@@ -81,7 +81,7 @@ const Timeline = ({ t }: { t: any }) => {
       </ScrollReveal>
 
       {/* Timeline Desktop */}
-      <div className="relative pt-32 pb-12 hidden lg:block">
+      <div className="relative pt-32 pb-12 hidden lg:block overflow-x-hidden">
         {/* Main Line */}
         <div className="absolute top-[124px] left-0 w-full h-1 bg-white/20"></div>
         

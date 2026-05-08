@@ -307,11 +307,10 @@ const Navbar = ({ lang, setLang, t }: { lang: 'pt' | 'en', setLang: (l: 'pt' | '
             ))}
           </div>
 
-          <div className="md:hidden flex w-full justify-between items-center">
-             <span className="font-display font-black text-brand-black text-base">PLAN</span>
-             <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-brand-black">
-               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-             </button>
+          <div className="md:hidden flex w-full justify-end items-center">
+            <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-brand-black p-2">
+              {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
           </div>
         </div>
       </nav>
@@ -324,94 +323,68 @@ const Navbar = ({ lang, setLang, t }: { lang: 'pt' | 'en', setLang: (l: 'pt' | '
             exit={{ opacity: 0, x: '100%' }}
             className="fixed inset-0 bg-brand-yellow z-[60] flex flex-col p-8 overflow-y-auto"
           >
-            <div className="flex justify-between items-center mb-8">
-              <span className="font-display font-black text-brand-black text-2xl tracking-tighter">PLAN</span>
+            <div className="flex justify-end p-2 mb-8">
               <button onClick={() => setIsMobileMenuOpen(false)} className="text-brand-black">
-                <X size={32} />
+                <X size={40} />
               </button>
             </div>
             
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-8 items-center text-center mt-12">
               {navLinks.map((link) => (
-                <div key={link.name} className="flex flex-col gap-2">
-                  {link.hasDropdown ? (
-                    <>
-                      <div className="text-xl font-black text-brand-black opacity-30 uppercase tracking-widest text-[10px] mb-2">{link.name}</div>
+                <div key={link.name} className="flex flex-col gap-4">
+                  <Link 
+                    to={(link as any).to || '#'} 
+                    onClick={() => {
+                      if (!link.hasDropdown) {
+                        handleLinkClick(link);
+                      }
+                    }}
+                    className="text-3xl font-black text-brand-black uppercase tracking-tighter"
+                  >
+                    {link.name}
+                  </Link>
+
+                  {link.hasDropdown && (
+                    <div className="flex flex-col gap-3">
                       {link.dropdownItems?.map((item: any) => (
-                        <div key={item.name} className="flex flex-col gap-2 pl-4">
+                        <div key={item.name} className="flex flex-col gap-2">
                           {item.hasSubmenu ? (
-                            <div className="flex flex-col gap-2">
-                              <div className="text-brand-black font-bold text-lg uppercase tracking-tight opacity-40">{item.name}</div>
-                              <div className="flex flex-col gap-3 pl-4 border-l-2 border-brand-black/20 my-2">
+                            <>
+                              <Link 
+                                to={item.to || '#'} 
+                                onClick={() => !item.hasSubmenu && handleLinkClick(item)}
+                                className="text-brand-black/40 font-bold text-lg uppercase tracking-widest text-xs"
+                              >
+                                {item.name}
+                              </Link>
+                              <div className="flex flex-col gap-2">
                                 {item.submenuItems?.map((sub: any) => (
-                                  <div key={sub.name} className="flex flex-col gap-2">
-                                    {sub.hasSubSubmenu ? (
-                                      <>
-                                        <Link 
-                                          to={sub.to} 
-                                          onClick={() => handleLinkClick(sub)}
-                                          className="text-brand-black font-bold text-base uppercase tracking-tighter"
-                                        >
-                                          {sub.name}
-                                        </Link>
-                                        <div className="flex flex-col gap-2 pl-4 border-l border-brand-black/10 my-1">
-                                          {sub.subSubmenuItems?.map((ss: any) => (
-                                            <Link 
-                                              key={ss.name} 
-                                              to={ss.to} 
-                                              onClick={() => handleLinkClick(ss)}
-                                              className="text-brand-black font-medium text-sm uppercase tracking-tighter"
-                                            >
-                                              {ss.name}
-                                            </Link>
-                                          ))}
-                                        </div>
-                                      </>
-                                    ) : (
-                                      <Link 
-                                        key={sub.name} 
-                                        to={sub.to} 
-                                        onClick={() => handleLinkClick(sub)}
-                                        className="text-brand-black font-bold text-base uppercase tracking-tighter"
-                                      >
-                                        {sub.name}
-                                      </Link>
-                                    )}
-                                  </div>
+                                  <Link 
+                                    key={sub.name} 
+                                    to={sub.to} 
+                                    onClick={() => handleLinkClick(sub)}
+                                    className="text-brand-black font-bold text-xl uppercase tracking-tight"
+                                  >
+                                    {sub.name}
+                                  </Link>
                                 ))}
                               </div>
-                            </div>
+                            </>
                           ) : (
                             <Link 
                               to={item.to} 
                               onClick={() => handleLinkClick(item)}
-                              className="text-brand-black font-bold text-xl uppercase tracking-tighter"
+                              className="text-brand-black font-bold text-xl uppercase tracking-tight"
                             >
                               {item.name}
                             </Link>
                           )}
                         </div>
                       ))}
-                    </>
-                  ) : (
-                    <Link 
-                      to={(link as any).to || '#'} 
-                      onClick={() => handleLinkClick(link)}
-                      className="text-2xl font-black text-brand-black uppercase tracking-tighter"
-                    >
-                      {link.name}
-                    </Link>
+                    </div>
                   )}
                 </div>
               ))}
-              
-              <Link 
-                to="/#contato" 
-                onClick={() => handleLinkClick({ type: 'anchor', to: '/#contato' })}
-                className="mt-8 bg-brand-black text-brand-yellow font-black py-4 px-6 text-center shadow-lg uppercase tracking-widest text-sm"
-              >
-                {t.nav.contact}
-              </Link>
             </div>
           </motion.div>
         )}
@@ -427,7 +400,7 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col overflow-x-hidden">
         <Navbar lang={lang} setLang={setLang} t={t} />
 
         <Routes>
