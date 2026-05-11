@@ -386,26 +386,14 @@ export default function Home({
         </div>
 
         {/* Scrolling Logotypes */}
-        <div className="relative flex overflow-x-hidden">
-          <div className="animate-infinite-scroll flex items-center justify-around gap-12 py-12 whitespace-nowrap min-w-full">
-            {CLIENTS.map((client) => (
-              <div key={client.name} className="flex-shrink-0 flex items-center justify-center h-20 md:h-28 w-40 md:w-56 px-4">
+        <div className="relative overflow-x-hidden">
+          <div className="flex animate-infinite-scroll w-fit items-center gap-12 py-12 px-6">
+            {[...CLIENTS, ...CLIENTS].map((client, idx) => (
+              <div key={`${client.name}-${idx}`} className="flex-shrink-0 flex items-center justify-center h-20 md:h-28 w-40 md:w-56 px-4">
                 <img 
                   src={client.logo} 
                   alt={client.name} 
-                  className="max-h-full max-w-full object-contain transition-all" 
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-            ))}
-          </div>
-          <div className="animate-infinite-scroll flex items-center justify-around gap-12 py-12 whitespace-nowrap min-w-full" aria-hidden="true">
-            {CLIENTS.map((client) => (
-              <div key={`${client.name}-duplicate`} className="flex-shrink-0 flex items-center justify-center h-20 md:h-28 w-40 md:w-56 px-4">
-                <img 
-                  src={client.logo} 
-                  alt={client.name} 
-                  className="max-h-full max-w-full object-contain transition-all" 
+                  className="max-h-full max-w-full object-contain transition-all duration-500" 
                   referrerPolicy="no-referrer"
                 />
               </div>
