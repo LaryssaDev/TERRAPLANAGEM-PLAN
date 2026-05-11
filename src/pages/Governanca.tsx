@@ -246,7 +246,7 @@ export default function Governanca({ t, GOVERNANCE_IMG }: { t: any, GOVERNANCE_I
             <div className="relative w-full max-w-5xl shadow-2xl rounded-sm overflow-hidden border border-brand-gray-medium bg-white p-4 md:p-8">
               <img 
                 src={STRUCTURE_IMG} 
-                alt="Estrutura Organizacional Direx" 
+                alt="Estrutura Organizacional Direx | Terraplanagem PLAN" 
                 className="w-full h-auto"
                 referrerPolicy="no-referrer"
               />

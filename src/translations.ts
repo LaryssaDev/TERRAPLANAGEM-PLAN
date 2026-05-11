@@ -103,7 +103,7 @@ export const translations = {
       desc: "Nossa governança é baseada na integração entre planejamento, execução e controle, assegurando que cada projeto seja conduzido com o máximo de eficiência e transparência.",
       ethics: {
         title: "Código de Conduta",
-        text: "Na Direx Consultoria e Serviços – Terraplanagem Plan, o Código de Conduta estabelece as diretrizes que orientam o comportamento de todos que atuam em nome da empresa, garantindo integridade, segurança e relações profissionais baseadas no respeito.",
+        text: "Na Direx | Terraplanagem PLAN, o Código de Conduta estabelece as diretrizes que orientam o comportamento de todos que atuam em nome da empresa, garantindo integridade, segurança e relações profissionais baseadas no respeito.",
         principles: {
           title: "Princípios Fundamentais",
           items: [
@@ -118,7 +118,7 @@ export const translations = {
           title: "Regras de Conduta",
           items: [
             "Ambiente profissional e respeitoso",
-            "Uso obrigatório de EPIs",
+            "Uso obrigatório de EPIs e EPCs",
             "Cumprimento das normas de segurança (NRs)",
             "Operação de máquinas apenas com autorização",
             "Transparência com clientes",
@@ -135,11 +135,11 @@ export const translations = {
             "Discriminação ou desrespeito"
           ]
         },
-        quote: "“Na Direx, ética não é opção — é a base de tudo o que fazemos.”"
+        quote: "“Na Direx | Terraplanagem PLAN, ética não é opção — é a base de tudo o que fazemos.”"
       },
       compliance: {
         title: "Canal de Denúncias",
-        text: "A Direx disponibiliza um canal seguro e confidencial para o reporte de irregularidades, garantindo um ambiente ético, transparente e responsável.",
+        text: "A Direx | Terraplanagem PLAN disponibiliza um canal seguro e confidencial para o reporte de irregularidades, garantindo um ambiente ético, transparente e responsável.",
         purpose: {
           title: "Finalidade",
           items: [
@@ -177,7 +177,7 @@ export const translations = {
       },
       antiCorruption: {
         title: "Combate à Corrupção",
-        text: "A Direx adota uma política de tolerância zero contra corrupção, fraude ou qualquer conduta antiética.",
+        text: "A Direx | Terraplanagem PLAN adota uma política de tolerância zero contra corrupção, fraude ou qualquer conduta antiética.",
         prohibited: {
           title: "É proibido",
           items: [
@@ -207,7 +207,7 @@ export const translations = {
       },
       orgStructure: {
         title: "Estrutura Organizacional",
-        text: "A Direx possui uma estrutura organizacional bem definida, garantindo eficiência operacional, gestão estratégica e qualidade na execução dos serviços."
+        text: "A Direx | Terraplanagem PLAN possui uma estrutura organizacional bem definida, garantindo eficiência operacional, gestão estratégica e qualidade na execução dos serviços."
       }
     },
     authority: {
@@ -392,7 +392,7 @@ export const translations = {
       desc: "Our governance is based on the integration of planning, execution, and control, ensuring that each project is conducted with maximum efficiency and transparency.",
       ethics: {
         title: "Code of Conduct",
-        text: "At Direx Consultoria e Serviços – Terraplanagem Plan, the Code of Conduct establishes the guidelines that guide the behavior of everyone who acts on behalf of the company, ensuring integrity, safety, and professional relationships based on respect.",
+        text: "At Direx | Terraplanagem PLAN, the Code of Conduct establishes the guidelines that guide the behavior of everyone who acts on behalf of the company, ensuring integrity, safety, and professional relationships based on respect.",
         principles: {
           title: "Fundamental Principles",
           items: [
@@ -407,7 +407,7 @@ export const translations = {
           title: "Rules of Conduct",
           items: [
             "Professional and respectful environment",
-            "Mandatory use of PPE",
+            "Mandatory use of PPE and EPCs",
             "Compliance with safety standards (NRs)",
             "Machine operation only with authorization",
             "Transparency with customers",
@@ -424,11 +424,11 @@ export const translations = {
             "Discrimination or disrespect"
           ]
         },
-        quote: "“At Direx, ethics is not an option — it is the basis of everything we do.”"
+        quote: "“At Direx | Terraplanagem PLAN, ethics is not an option — it is the basis of everything we do.”"
       },
       compliance: {
         title: "Whistleblowing Channel",
-        text: "Direx provides a safe and confidential channel for reporting irregularities, ensuring an ethical, transparent, and responsible environment.",
+        text: "Direx | Terraplanagem PLAN provides a safe and confidential channel for reporting irregularities, ensuring an ethical, transparent, and responsible environment.",
         purpose: {
           title: "Purpose",
           items: [
@@ -466,7 +466,7 @@ export const translations = {
       },
       antiCorruption: {
         title: "Anti-Corruption",
-        text: "Direx adopts a zero-tolerance policy against corruption, fraud, or any unethical conduct.",
+        text: "Direx | Terraplanagem PLAN adopts a zero-tolerance policy against corruption, fraud, or any unethical conduct.",
         prohibited: {
           title: "It is prohibited",
           items: [
@@ -496,7 +496,7 @@ export const translations = {
       },
       orgStructure: {
         title: "Organizational Structure",
-        text: "Direx has a well-defined organizational structure, ensuring operational efficiency, strategic management, and quality in the execution of services."
+        text: "Direx | Terraplanagem PLAN has a well-defined organizational structure, ensuring operational efficiency, strategic management, and quality in the execution of services."
       }
     },
     authority: {
